@@ -1,0 +1,52 @@
+@use "variables" as var;
+
+#box {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+
+  &-grey {
+    @extend #box;
+    background-color: rgba(var.$grey, 0.3);
+    left: 1458px;
+    top: 180px;
+  }
+
+  &-blue {
+    @extend #box;
+    background-color: rgba(var.$sky, 0.1);
+    left: 1364px;
+    top: 269px;
+  }
+}
+
+.dots {
+  position: absolute;
+  top: 141px;
+  right: 382px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  justify-content: start;
+  width: 10rem;
+  gap: 10px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var.$dark-grey;
+
+  &-text {
+    @extend .dot;
+    background-color: rgba(var.$dark-grey, 0.1);
+    color: var.$midnight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
