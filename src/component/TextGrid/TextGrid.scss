@@ -1,0 +1,33 @@
+@use "@variables" as var;
+
+
+.dots {
+  position: absolute;
+  top: 141px;
+  right: 382px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  justify-content: start;
+  width: 10rem;
+  gap: 10px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: var.$dark-grey;
+
+  &-text {
+    @extend .dot;
+    background-color: rgba(var.$dark-grey, 0.1);
+    color: var.$dark-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+

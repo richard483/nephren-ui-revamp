@@ -1,61 +1,13 @@
-import './App.scss';
+import '@/App.scss';
+import TextGrid from './component/TextGrid/TextGrid.tsx';
 
 function App() {
   return (
     <>
+      <h1>RICHARD WILLIAM</h1>
       <span id="box-grey" />
       <span id="box-blue" />
-      <div className="dots">
-        <span className="dot" />
-        <span className="dot-text">e</span>
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot-text">n</span>
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot-text">p</span>
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot-text">e</span>
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot-text">r</span>
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot-text">h</span>
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
-        <span className="dot-text">n</span>
-      </div>
+      <TextGrid />
     </>
   );
 }
