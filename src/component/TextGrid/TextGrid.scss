@@ -22,7 +22,6 @@
   &-text {
     @extend .dot;
     background-color: rgba(var.$dark-grey, 0.1);
-    color: var.$dark-grey;
     display: flex;
     justify-content: center;
     align-items: center;
