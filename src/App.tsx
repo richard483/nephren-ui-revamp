@@ -9,12 +9,21 @@ function App() {
       <span id="box-blue" />
       <TextGrid />
       <div className="content-wrapper">
-        <h1>RICHARD WILLIAM</h1>
-        <div className="items">
-          <ItemList text="BACK END" />
-          <ItemList text="FRONT END" />
-          <ItemList text="MOBILE PROGRAMMING" />
-          <ItemList text="FULL STACK" />
+        <div className="title">
+          <h1>RICHARD WILLIAM</h1>
+          <div className="items">
+            <ItemList text="BACK END" />
+            <ItemList text="FRONT END" />
+            <ItemList text="MOBILE PROGRAMMING" />
+            <ItemList text="FULL STACK" />
+          </div>
+        </div>
+        <div className="sub-content">
+          <span className="sub-content-desc">Yes, I code</span>
+          <div className="sub-content-nephren">
+            <span className="sub-content-nephren-bar-code">nephren</span>
+            <span className="sub-content-nephren-desc">nephren</span>
+          </div>
         </div>
       </div>
     </>

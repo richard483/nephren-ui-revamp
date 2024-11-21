@@ -5,13 +5,15 @@
   padding: 0;
 }
 
-html {
+html, body {
   background-color: var.$bg;
+  height: 100%;
+  width: 100%;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 175px;
+  height: 100%;
+  padding: 0 175px;
   text-align: center;
   font-family: "Aldrich", sans-serif;
   font-weight: 400;
