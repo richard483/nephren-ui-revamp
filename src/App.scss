@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 180px 0;
+  padding: 16.67vh 0;
   height: calc(100% - 2 * 180px);
   justify-content: space-between;
 }
@@ -36,10 +36,18 @@ h1 {
     left: 1364px;
     top: 269px;
   }
+
+  &-x {
+    @extend #box;
+    right: 525px;
+    top: 541px;
+    width: auto;
+    height: auto;
+  }
 }
 
 .items {
-  margin-top: 300px;
+  margin-top: 25vh;
   margin-left: 10px;
   display: flex;
   flex-direction: column;

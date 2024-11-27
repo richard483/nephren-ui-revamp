@@ -2,11 +2,14 @@ import '@/App.scss';
 import TextGrid from './component/TextGrid/TextGrid.tsx';
 import ItemList from './component/ItemList/ItemList.tsx';
 
+import x_pattern from '@assets/x_pattern.svg';
+
 function App() {
   return (
     <>
       <span id="box-grey" />
       <span id="box-blue" />
+      <img id="box-x" src={x_pattern} />
       <TextGrid />
       <div className="content-wrapper">
         <div className="title">
