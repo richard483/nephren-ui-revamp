@@ -1,0 +1,36 @@
+@use "@variables" as var;
+
+
+.cross-line {
+  width: 35px;
+  height: 10px;
+  background-color: var.$grey;
+  transform: skewY(-45deg);
+
+  &-red {
+    @extend .cross-line;
+    background-color: var.$red;
+  }
+}
+
+.cross-lines {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &-left {
+    @extend .cross-lines;
+    top: 100px;
+    left: 80px;
+  }
+
+  &-right {
+    @extend .cross-lines;
+    top: 100px;
+    right: 80px;
+  }
+}
+
+
+
