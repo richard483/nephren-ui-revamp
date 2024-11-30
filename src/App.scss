@@ -26,14 +26,14 @@ h1 {
   &-grey {
     @extend #box;
     background-color: rgba(var.$grey, 0.3);
-    left: 1458px;
+    right: 142px;
     top: 180px;
   }
 
   &-blue {
     @extend #box;
     background-color: rgba(var.$sky, 0.1);
-    left: 1364px;
+    right: 236px;
     top: 269px;
   }
 
