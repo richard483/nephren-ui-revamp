@@ -17,6 +17,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
       '@variables': path.resolve(__dirname, 'src/_variables.scss'),
       '@assets': path.resolve(__dirname, 'src/assets'),
+      '@component': path.resolve(__dirname, 'src/component'),
     },
   },
 });

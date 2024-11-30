@@ -1,10 +1,10 @@
-import '@/App.scss';
-import TextGrid from './component/TextGrid/TextGrid.tsx';
-import ItemList from './component/ItemList/ItemList.tsx';
+import './HeroSection.scss';
+import TextGrid from '@component/TextGrid/TextGrid.tsx';
+import ItemList from '@component/ItemList/ItemList.tsx';
 
 import x_pattern from '@assets/x_pattern.svg';
 
-function App() {
+function HeroSection() {
   return (
     <>
       <span id="box-grey" />
@@ -33,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default HeroSection;
