@@ -17,7 +17,12 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh "docker build -t ${DOCKER_IMAGE} ."
+                sh '''
+                    CONTAINER_ID=$(docker ps -q --filter "ancestor=${DOCKER_IMAGE}")
+                    if [ ! -z "$CONTAINER_ID" ]; then
+                        docker stop $CONTAINER_ID
+                    fi
+                '''
             }
         }
 
