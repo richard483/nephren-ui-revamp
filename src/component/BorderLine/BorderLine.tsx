@@ -19,7 +19,7 @@ function BorderLine() {
         <div className="cross-line"></div>
         <div className="cross-line"></div>
         <div className="cross-line"></div>
-        <div className="cross-line"></div>
+        <div className="cross-line-red"></div>
         <div className="cross-line-red"></div>
       </div>
     </>
