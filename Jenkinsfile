@@ -26,9 +26,12 @@ pipeline {
             steps {
                 echo 'Stopping and removing old container if it exists...'
                 sh '''
-                    if [ $(docker ps -aq -f name=${CONTAINER_NAME}) ]; then
-                        docker stop ${CONTAINER_NAME} || true
-                        docker rm ${CONTAINER_NAME} || true
+                    CONTAINER_ID=$(docker ps -aq -f name=${CONTAINER_NAME})
+                    if [ ! -z "$CONTAINER_ID" ]; then
+                        docker stop $CONTAINER_ID
+                        docker rm $CONTAINER_ID
+                    else
+                        echo "No container found with name ${CONTAINER_NAME}."
                     fi
                 '''
                 echo 'Running new container...'
