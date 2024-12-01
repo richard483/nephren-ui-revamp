@@ -19,15 +19,6 @@ pipeline {
             steps {
                 echo 'Building Docker image...'
                 sh "docker build -t ${DOCKER_IMAGE} ."
-                echo 'Removing dangling images...'
-                sh '''
-                    DANGLING_IMAGES=$(docker images -f "dangling=true" -q)
-                    if [ ! -z "$DANGLING_IMAGES" ]; then
-                        docker rmi -f $DANGLING_IMAGES
-                    else
-                        echo "No dangling images to remove."
-                    fi
-                '''
             }
         }
 
@@ -45,6 +36,20 @@ pipeline {
                 '''
                 echo 'Running new container...'
                 sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name ${CONTAINER_NAME} ${DOCKER_IMAGE}"
+            }
+        }
+
+        stage('Removing Dangling Images') {
+            steps {
+                echo 'Removing dangling images...'
+                sh '''
+                    DANGLING_IMAGES=$(docker images -f "dangling=true" -q)
+                    if [ ! -z "$DANGLING_IMAGES" ]; then
+                        docker rmi -f $DANGLING_IMAGES
+                    else
+                        echo "No dangling images to remove."
+                    fi
+                '''
             }
         }
     }
