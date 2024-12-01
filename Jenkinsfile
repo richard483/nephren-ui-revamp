@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "nephren-ui-revamp:latest"
-        CONTAINER_IMAGE = "nephren-ui-revamp"
+        CONTAINER_NAME = "nephren-ui-revamp"
         APP_PORT = "3000"
     }
 
