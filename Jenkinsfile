@@ -33,6 +33,13 @@ pipeline {
             }
         }
 
+        stage('Removing Docker Container') {
+            steps {
+                echo 'Removing Docker container...'
+                sh "docker rmi -f ${DOCKER_IMAGE}"
+            }
+        }
+
         stage('Run Docker Container') {
             steps {
                 echo 'Running Docker container...'
