@@ -14,13 +14,6 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building Docker image...'
-                sh "docker build -t ${DOCKER_IMAGE} ."
-            }
-        }
-
         stage('Stopping Docker Image') {
             steps {
                 echo 'Stopping Docker image...'
@@ -37,6 +30,13 @@ pipeline {
             steps {
                 echo 'Removing Docker container...'
                 sh "docker rmi -f ${DOCKER_IMAGE}"
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                echo 'Building Docker image...'
+                sh "docker build -t ${DOCKER_IMAGE} ."
             }
         }
 
