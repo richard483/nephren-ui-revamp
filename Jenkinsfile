@@ -24,7 +24,7 @@ pipeline {
         stage('Stopping Docker Image') {
             steps {
                 echo 'Stopping Docker image...'
-                sh "docker stop $(docker ps -q --filter ancestor=${DOCKER_IMAGE} )"
+                sh "docker stop \$(docker ps -q --filter ancestor=${DOCKER_IMAGE} )"
             }
         }
 
