@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "nephren-ui-revamp:latest"
+        CONTAINER_IMAGE = "nephren-ui-revamp"
         APP_PORT = "3000"
     }
 
@@ -29,7 +30,7 @@ pipeline {
         stage('Removing Docker Container') {
             steps {
                 echo 'Removing Docker container...'
-                sh "docker rmi -f ${DOCKER_IMAGE}"
+                sh "docker rmi -f ${CONTAINER_IMAGE}"
             }
         }
 
@@ -43,7 +44,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 echo 'Running Docker container...'
-                sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name nephren-ui-revamp ${DOCKER_IMAGE}"
+                sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name ${CONTAINER_IMAGE} ${DOCKER_IMAGE}"
             }
         }
     }
