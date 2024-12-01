@@ -10,27 +10,8 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                echo 'Cloning repository...'
+                echo 'Checking out code...'
                 checkout scm
-            }
-        }
-
-        stage('Stopping Docker Image') {
-            steps {
-                echo 'Stopping Docker image...'
-                sh '''
-                    CONTAINER_ID=$(docker ps -q --filter "ancestor=${DOCKER_IMAGE}")
-                    if [ ! -z "$CONTAINER_ID" ]; then
-                        docker stop $CONTAINER_ID
-                    fi
-                '''
-            }
-        }
-
-        stage('Removing Docker Container') {
-            steps {
-                echo 'Removing Docker container...'
-                sh "docker rmi -f ${CONTAINER_IMAGE}"
             }
         }
 
@@ -41,25 +22,27 @@ pipeline {
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Deploy Application') {
             steps {
-                echo 'Running Docker container...'
-                sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name ${CONTAINER_IMAGE} ${DOCKER_IMAGE}"
+                echo 'Stopping and removing old container if it exists...'
+                sh '''
+                    if [ $(docker ps -aq -f name=${CONTAINER_NAME}) ]; then
+                        docker stop ${CONTAINER_NAME} || true
+                        docker rm ${CONTAINER_NAME} || true
+                    fi
+                '''
+                echo 'Running new container...'
+                sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name ${CONTAINER_NAME} ${DOCKER_IMAGE}"
             }
         }
     }
 
     post {
-        always {
-            echo 'Cleaning up...'
-//             sh "docker stop nephren-ui-revamp || true"
-//             sh "docker rm nephren-ui-revamp || true"
+        success {
+            echo 'Pipeline succeeded!'
         }
         failure {
             echo 'Pipeline failed.'
-        }
-        success {
-            echo 'Pipeline succeeded.'
         }
     }
 }
