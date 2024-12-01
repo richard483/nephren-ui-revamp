@@ -25,7 +25,10 @@ pipeline {
             steps {
                 echo 'Stopping Docker image...'
                 sh '''
-                docker stop \$(docker ps -q --filter ancestor=${DOCKER_IMAGE} )
+                    CONTAINER_ID=$(docker ps -q --filter "ancestor=${DOCKER_IMAGE}")
+                    if [ ! -z "$CONTAINER_ID" ]; then
+                        docker stop $CONTAINER_ID
+                    fi
                 '''
             }
         }
