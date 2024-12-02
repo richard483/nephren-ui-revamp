@@ -35,7 +35,8 @@ pipeline {
                     fi
                 '''
                 echo 'Running new container...'
-                sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name ${CONTAINER_NAME} ${DOCKER_IMAGE}"
+                sh "docker run -d -p ${APP_PORT}:${APP_PORT} --name ${CONTAINER_NAME} --restart unless-stopped
+                ${DOCKER_IMAGE}"
             }
         }
 
