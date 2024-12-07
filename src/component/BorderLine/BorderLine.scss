@@ -48,6 +48,15 @@
   }
 }
 
+@keyframes extending-line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(100vh - 380px);
+  }
+}
+
 .cross-line {
   width: 35px;
   height: 10px;
@@ -61,10 +70,12 @@
 
   &-long {
     position: fixed;
-    bottom: 80px;
+    top: 300px;
     right: 112px;
     width: 3px;
-    height: calc(100vh - 380px);
+    height: 0;
+    animation: extending-line 2s ease-in-out forwards;
+    transform-origin: top;
     background-color: var.$grey;
   }
 }
