@@ -18,7 +18,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh "docker build -t ${DOCKER_IMAGE} ."
+                sh "docker build -t ${DOCKER_IMAGE} --build-arg VITE_GOOGLE_TAG=${env.VITE_GOOGLE_TAG} ."
             }
         }
 
