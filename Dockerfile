@@ -2,6 +2,10 @@ FROM node:21-alpine
 
 LABEL authors="Richard William"
 
+ARG VITE_GOOGLE_TAG
+
+ENV VITE_GOOGLE_TAG=$VITE_GOOGLE_TAG
+
 WORKDIR /app
 
 COPY package.json .
