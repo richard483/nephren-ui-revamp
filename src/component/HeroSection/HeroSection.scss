@@ -1,5 +1,9 @@
 @use "@variables" as var;
 
+body {
+  overflow: hidden;
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
