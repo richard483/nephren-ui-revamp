@@ -16,7 +16,9 @@ function BorderLine() {
       }, 100);
     }
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+    };
   }, [visibleLines, rightLine]);
 
   return (

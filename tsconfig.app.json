@@ -22,27 +22,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@component/*": [
-        "src/component/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@variables/*": [
-        "src/_variables.scss"
-      ]
-    }
+    "noUncheckedSideEffectImports": true
   },
   "include": [
     "src"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
