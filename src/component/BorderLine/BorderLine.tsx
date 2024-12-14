@@ -42,7 +42,6 @@ function BorderLine() {
       </div>
       <div className="cross-lines-right">
         {Array.from({ length: rightLine }, (_, i) => {
-          console.log('I value', i);
           if (i === rightLine - 1 && !longAnimationStart) {
             setTimeout(() => {
               setLongAnimationStart(true);
