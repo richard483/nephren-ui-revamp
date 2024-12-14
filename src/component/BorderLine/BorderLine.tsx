@@ -1,6 +1,24 @@
 import './BorderLine.scss';
+import { useEffect, useState } from 'react';
 
 function BorderLine() {
+  const leftLine: number = 5;
+  const rightLine: number = 9;
+
+  const [visibleLines, setVisibleLines] = useState<number>(0);
+  const [longAnimationStart, setLongAnimationStart] = useState<boolean>(false);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (visibleLines < Math.max(rightLine, leftLine)) {
+      timer = setTimeout(() => {
+        setVisibleLines((prev) => prev + 1);
+      }, 100);
+    }
+
+    return () => clearTimeout(timer);
+  }, [visibleLines, rightLine]);
+
   return (
     <>
       <div className="corner-top-left">
@@ -9,24 +27,42 @@ function BorderLine() {
       </div>
       <span className="top-left" />
       <div className="cross-lines-left">
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
+        {Array.from({ length: leftLine }, (_, i) => (
+          <span
+            key={i}
+            className="cross-line"
+            style={{
+              opacity: i < visibleLines ? 1 : 0,
+              transition: 'opacity 0.5s ease-in-out',
+            }}
+          />
+        ))}
       </div>
       <div className="cross-lines-right">
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line" />
-        <span className="cross-line-red" />
-        <span className="cross-line-long" />
+        {Array.from({ length: rightLine }, (_, i) => {
+          console.log('I value', i);
+          if (i === rightLine - 1 && !longAnimationStart) {
+            setTimeout(() => {
+              setLongAnimationStart(true);
+            }, 1000);
+          }
+          return (
+            <span
+              key={i}
+              className="cross-line"
+              style={{
+                opacity: i < visibleLines ? 1 : 0,
+                transition: 'opacity 0.5s ease-in-out',
+              }}
+            />
+          );
+        })}
+        {longAnimationStart && (
+          <>
+            <span className="cross-line-red" />
+            <span className="cross-line-long" />
+          </>
+        )}
       </div>
       <div className="corner-bottom-left">
         <span className="dotted-line" />

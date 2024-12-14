@@ -1,5 +1,41 @@
 @use "@variables" as var;
 
+@keyframes extending-line-h {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(100vh - 370px);
+  }
+}
+
+@keyframes extending-line-w {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 145px;
+  }
+}
+
+@keyframes extending-line-dot {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 5vh;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .corner-top-left {
   position: fixed;
   top: 80px;
@@ -24,9 +60,10 @@
   position: fixed;
   top: 80px;
   left: 175px;
-  width: 145px;
+  width: 0;
   height: 3px;
   background-color: var.$grey;
+  animation: extending-line-w 1s ease-out forwards;
 }
 
 .cross-lines {
@@ -48,15 +85,6 @@
   }
 }
 
-@keyframes extending-line {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: calc(100vh - 370px);
-  }
-}
-
 .cross-line {
   width: 35px;
   height: 10px;
@@ -66,6 +94,7 @@
   &-red {
     @extend .cross-line;
     background-color: var.$red;
+    animation: fading 1s ease-out forwards;
   }
 
   &-long {
@@ -74,7 +103,7 @@
     right: 112px;
     width: 3px;
     height: 0;
-    animation: extending-line 2s ease-in-out forwards;
+    animation: extending-line-h 2s cubic-bezier(.21, .52, .19, .83) forwards;
     transform-origin: top;
     background-color: var.$grey;
   }
@@ -93,7 +122,8 @@
 .path {
   stroke-width: 3px;
   stroke: var.$grey;
-  d: path("M2 0V70.2468L51.1803 119.5H152")
+  d: path("M2 0 V70 L51 119.5 H152");
+  animation: fading 1s ease-out forwards;
 }
 
 .dotted-line {
@@ -103,4 +133,5 @@
   width: 3px;
   height: 5vh;
   border-left: var.$grey 3px dotted;
+  animation: extending-line-dot 1s ease-out forwards;
 }
