@@ -35,7 +35,7 @@ function BorderLine() {
             className="cross-line"
             style={{
               opacity: i < visibleLines ? 1 : 0,
-              transition: 'opacity 0.5s ease-in-out',
+              transition: 'opacity 0.1s ease-in-out',
             }}
           />
         ))}
@@ -53,7 +53,7 @@ function BorderLine() {
               className="cross-line"
               style={{
                 opacity: i < visibleLines ? 1 : 0,
-                transition: 'opacity 0.5s ease-in-out',
+                transition: 'opacity 0.1s ease-in-out',
               }}
             />
           );

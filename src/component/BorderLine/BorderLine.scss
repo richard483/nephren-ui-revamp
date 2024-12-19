@@ -63,7 +63,7 @@
   width: 0;
   height: 3px;
   background-color: var.$grey;
-  animation: extending-line-w 1s ease-out forwards;
+  animation: extending-line-w 0.7s cubic-bezier(.21, .52, .19, .83) forwards;
 }
 
 .cross-lines {
@@ -94,7 +94,7 @@
   &-red {
     @extend .cross-line;
     background-color: var.$red;
-    animation: fading 1s ease-out forwards;
+    animation: fading 0.1s ease-out forwards;
   }
 
   &-long {
@@ -103,7 +103,7 @@
     right: 112px;
     width: 3px;
     height: 0;
-    animation: extending-line-h 2s cubic-bezier(.21, .52, .19, .83) forwards;
+    animation: extending-line-h 1s cubic-bezier(.21, .52, .19, .83) forwards;
     transform-origin: top;
     background-color: var.$grey;
   }
