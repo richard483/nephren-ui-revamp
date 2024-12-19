@@ -36,6 +36,15 @@
   }
 }
 
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 .corner-top-left {
   position: fixed;
   top: 80px;
@@ -64,6 +73,9 @@
   height: 3px;
   background-color: var.$grey;
   animation: extending-line-w 0.7s cubic-bezier(.21, .52, .19, .83) forwards;
+  -webkit-animation: extending-line-w 0.7s cubic-bezier(.21, .52, .19, .83) forwards;
+  -o-animation: extending-line-w 0.7s cubic-bezier(.21, .52, .19, .83) forwards;
+  -moz-animation: extending-line-w 0.7s cubic-bezier(.21, .52, .19, .83) forwards;
 }
 
 .cross-lines {
@@ -95,6 +107,9 @@
     @extend .cross-line;
     background-color: var.$red;
     animation: fading 0.1s ease-out forwards;
+    -webkit-animation: fading 0.1s ease-out forwards;
+    -o-animation: fading 0.1s ease-out forwards;
+    -moz-animation: fading 0.1s ease-out forwards;
   }
 
   &-long {
@@ -104,6 +119,9 @@
     width: 3px;
     height: 0;
     animation: extending-line-h 1s cubic-bezier(.21, .52, .19, .83) forwards;
+    -webkit-animation: extending-line-h 1s cubic-bezier(.21, .52, .19, .83) forwards;
+    -o-animation: extending-line-h 1s cubic-bezier(.21, .52, .19, .83) forwards;
+    -moz-animation: extending-line-h 1s cubic-bezier(.21, .52, .19, .83) forwards;
     transform-origin: top;
     background-color: var.$grey;
   }
@@ -122,8 +140,13 @@
 .path {
   stroke-width: 3px;
   stroke: var.$grey;
-  d: path("M2 0 V70 L51 119.5 H152");
-  animation: fading 1s ease-out forwards;
+  d: path("M152 119.5 H51 L2 70 V0");
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 2s linear backwards;
+  -o-animation: dash 2s linear backwards;
+  -moz-animation: dash 2s linear backwards;
+  animation: dash 2s linear backwards;
 }
 
 .dotted-line {
@@ -134,4 +157,7 @@
   height: 5vh;
   border-left: var.$grey 3px dotted;
   animation: extending-line-dot 1s ease-out forwards;
+  -webkit-animation: extending-line-dot 1s ease-out forwards;
+  -o-animation: extending-line-dot 1s ease-out forwards;
+  -moz-animation: extending-line-dot 1s ease-out forwards;
 }

@@ -7,9 +7,13 @@ function BorderLine() {
 
   const [visibleLines, setVisibleLines] = useState<number>(0);
   const [longAnimationStart, setLongAnimationStart] = useState<boolean>(false);
+  const [dottedLineStart, setDottedLineStart] = useState<boolean>(false);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
+    setTimeout(() => {
+      setDottedLineStart(true);
+    }, 1000);
     if (visibleLines < Math.max(rightLine, leftLine)) {
       timer = setTimeout(() => {
         setVisibleLines((prev) => prev + 1);
@@ -66,7 +70,7 @@ function BorderLine() {
         )}
       </div>
       <div className="corner-bottom-left">
-        <span className="dotted-line" />
+        {dottedLineStart && <span className="dotted-line" />}
         <svg className="svg">
           <path className="path" />
         </svg>
