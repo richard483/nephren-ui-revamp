@@ -1,12 +1,12 @@
 import './BorderLine.scss';
 import { useEffect, useState } from 'react';
+import StrippedLines from '@component/StrippedLines/StrippedLines.tsx';
 
 function BorderLine() {
   const leftLine: number = 5;
   const rightLine: number = 9;
 
   const [visibleLines, setVisibleLines] = useState<number>(0);
-  const [longAnimationStart, setLongAnimationStart] = useState<boolean>(false);
   const [dottedLineStart, setDottedLineStart] = useState<boolean>(false);
 
   useEffect(() => {
@@ -32,43 +32,21 @@ function BorderLine() {
         <span className="corner-top-left-V" />
       </div>
       <span className="top-left" />
-      <div className="cross-lines-left">
-        {Array.from({ length: leftLine }, (_, i) => (
-          <span
-            key={i}
-            className="cross-line"
-            style={{
-              opacity: i < visibleLines ? 1 : 0,
-              transition: 'opacity 0.1s ease-in-out',
-            }}
-          />
-        ))}
-      </div>
-      <div className="cross-lines-right">
-        {Array.from({ length: rightLine }, (_, i) => {
-          if (i === rightLine - 1 && !longAnimationStart) {
-            setTimeout(() => {
-              setLongAnimationStart(true);
-            }, 1000);
-          }
-          return (
-            <span
-              key={i}
-              className="cross-line"
-              style={{
-                opacity: i < visibleLines ? 1 : 0,
-                transition: 'opacity 0.1s ease-in-out',
-              }}
-            />
-          );
-        })}
-        {longAnimationStart && (
-          <>
-            <span className="cross-line-red" />
-            <span className="cross-line-long" />
-          </>
-        )}
-      </div>
+      <StrippedLines
+        className="cross-lines-left"
+        numberOfLines={5}
+        itemClassName="cross-line"
+      />
+      <StrippedLines
+        numberOfLines={9}
+        className="cross-lines-right"
+        itemClassName="cross-line"
+      >
+        <>
+          <span className="cross-line-red" />
+          <span className="cross-line-long" />
+        </>
+      </StrippedLines>
       <div className="corner-bottom-left">
         {dottedLineStart && <span className="dotted-line" />}
         <svg className="svg">
