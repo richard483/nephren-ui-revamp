@@ -50,7 +50,7 @@ function BorderLine() {
       <div className="corner-bottom-left">
         {dottedLineStart && <span className="dotted-line" />}
         <svg className="svg">
-          <path className="path" />
+          <path className="corner-bottom-left-path" />
         </svg>
       </div>
     </>

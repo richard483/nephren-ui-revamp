@@ -131,22 +131,22 @@
   position: fixed;
   bottom: 50px;
   left: 80px;
+
+  &-path {
+    stroke-width: 3px;
+    stroke: var.$grey;
+    d: path("M152 119.5 H51 L2 70 V0");
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    -webkit-animation: dash 2s linear backwards;
+    -o-animation: dash 2s linear backwards;
+    -moz-animation: dash 2s linear backwards;
+    animation: dash 2s linear backwards;
+  }
 }
 
 .svg {
   fill: none;
-}
-
-.path {
-  stroke-width: 3px;
-  stroke: var.$grey;
-  d: path("M152 119.5 H51 L2 70 V0");
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-  -webkit-animation: dash 2s linear backwards;
-  -o-animation: dash 2s linear backwards;
-  -moz-animation: dash 2s linear backwards;
-  animation: dash 2s linear backwards;
 }
 
 .dotted-line {
