@@ -14,7 +14,6 @@
     }
   }
 
-
   @keyframes left-V {
     0% {
       height: 0;
@@ -29,7 +28,7 @@
     width: 30px;
     height: 3px;
     background-color: var.$grey;
-    animation: left-H 1s ease-out forwards;
+    animation: left-H 0.25s ease-out forwards;
   }
 
   &-V {
@@ -37,7 +36,7 @@
     width: 3px;
     height: 30px;
     background-color: var.$grey;
-    animation: left-V 1s ease-out forwards;
+    animation: left-V 0.25s ease-out forwards;
   }
 }
 
@@ -137,7 +136,7 @@
 
   @keyframes dash {
     0% {
-      stroke-dashoffset: 1000;
+      stroke-dashoffset: 250;
     }
     100% {
       stroke-dashoffset: 0;
@@ -148,12 +147,12 @@
     stroke-width: 3px;
     stroke: var.$grey;
     d: path("M152 119.5 H51 L2 70 V0");
-    stroke-dasharray: 1000;
+    stroke-dasharray: 250;
     stroke-dashoffset: 0;
-    -webkit-animation: dash 2s linear backwards;
-    -o-animation: dash 2s linear backwards;
-    -moz-animation: dash 2s linear backwards;
-    animation: dash 2s linear backwards;
+    -webkit-animation: dash 1.3s linear backwards;
+    -o-animation: dash 1.3s linear backwards;
+    -moz-animation: dash 1.3s linear backwards;
+    animation: dash 1.3s linear backwards;
   }
 }
 

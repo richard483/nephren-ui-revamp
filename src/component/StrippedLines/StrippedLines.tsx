@@ -5,6 +5,7 @@ type StrippedLinesProps = {
   readonly className?: string;
   readonly itemClassName?: string;
   readonly children?: React.ReactNode;
+  readonly onAnimationEndCapture?: () => void;
 };
 
 function StrippedLines(props: StrippedLinesProps) {
@@ -17,6 +18,8 @@ function StrippedLines(props: StrippedLinesProps) {
       timer = setTimeout(() => {
         setVisibleLines((prev) => prev + 1);
       }, 100);
+    } else if (props.onAnimationEndCapture) {
+      props.onAnimationEndCapture();
     }
 
     return () => {
