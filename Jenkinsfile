@@ -5,6 +5,6 @@ GlobalPipeline() {
 	projectName = "nephren-ui-revamp"
 	appPort = "3000"
     buildArgs = [
-        VITE_GOOGLE_TAG: "${env.VITE_GOOGLE_TAG ?: 'default_value'}" // Default if null
+        VITE_GOOGLE_TAG: "default" // Default if null
     ]
 }
