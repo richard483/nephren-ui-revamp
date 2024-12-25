@@ -1,4 +1,4 @@
-@Library('global-library') _
+@Library('global-pipeline') _
 
 GlobalPipeline([
 	dockerImage: "nephren-ui-revamp:latest",
