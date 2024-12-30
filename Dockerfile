@@ -14,7 +14,7 @@ RUN npm install && npm i -g serve
 
 COPY . .
 
-RUN npm run build && find . -maxdepth 1 ! -name 'dist' ! -name '.' -exec rm -rf {} \;
+RUN npm run build
 
 EXPOSE 3000
 
