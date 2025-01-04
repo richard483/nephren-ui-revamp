@@ -7,19 +7,17 @@ import x_pattern from '@assets/x_pattern.svg';
 function HeroSection() {
   return (
     <>
-      <span id="box-grey" />
-      <span id="box-blue" />
-      <img id="box-x" src={x_pattern} />
-      <TextGrid />
       <div className="content-wrapper">
-        <div className="title">
-          <h1>RICHARD WILLIAM</h1>
-          <div className="items">
-            <ItemList text="BACK END" />
-            <ItemList text="FRONT END" />
-            <ItemList text="MOBILE PROGRAMMING" />
-            <ItemList text="FULL STACK" />
-          </div>
+        <span id="box-grey" />
+        <span id="box-blue" />
+        <img id="box-x" src={x_pattern} />
+        <TextGrid />
+        <h1 className="title">RICHARD WILLIAM</h1>
+        <div className="items">
+          <ItemList text="GITHUB" pointColor="dark-grey" />
+          <ItemList text="LINKEDIN" pointColor="sky" />
+          <ItemList text="INSTAGRAM" pointColor="red" />
+          <ItemList text="TWITTER" pointColor="sky" />
         </div>
         <div className="sub-content">
           <span className="sub-content-desc">Yes, I code</span>

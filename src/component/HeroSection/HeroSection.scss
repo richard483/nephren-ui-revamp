@@ -8,7 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 16.67vh 0 14vh;
+  margin: 0 96px;
+  padding: 176px 0;
   height: 100%;
   justify-content: space-between;
 }
@@ -23,39 +24,38 @@ h1 {
 }
 
 #box {
-  width: 320px;
-  height: 320px;
+  width: 264px;
+  height: 264px;
   position: absolute;
 
   &-grey {
     @extend #box;
     background-color: rgba(var.$grey, 0.3);
-    right: 142px;
-    top: 180px;
+    right: 0;
+    top: 112px;
   }
 
   &-blue {
     @extend #box;
     background-color: rgba(var.$sky, 0.1);
-    right: 236px;
-    top: 269px;
+    right: 96px;
+    top: 256px;
   }
 
   &-x {
     @extend #box;
-    right: 525px;
-    top: 541px;
-    width: auto;
-    height: auto;
+    right: 96px;
+    bottom: 336px;
+    width: 172px;
+    height: 172px;
   }
 }
 
 .items {
-  margin-top: 25vh;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .sub-content {

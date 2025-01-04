@@ -2,15 +2,15 @@
 
 .corner-top-left {
   position: fixed;
-  top: 80px;
-  left: 80px;
+  top: 96px;
+  left: 96px;
 
   @keyframes left-H {
     0% {
       width: 0;
     }
     100% {
-      width: 30px;
+      width: 32px;
     }
   }
 
@@ -19,7 +19,7 @@
       height: 0;
     }
     100% {
-      height: 30px;
+      height: 32px;
     }
   }
 
@@ -51,7 +51,7 @@
 
 .top-left {
   position: fixed;
-  top: 80px;
+  top: 96px;
   left: 175px;
   width: 0;
   height: 3px;
@@ -70,14 +70,14 @@
 
   &-left {
     @extend .cross-lines;
-    top: 100px;
-    left: 80px;
+    top: 124px;
+    left: 96px;
   }
 
   &-right {
     @extend .cross-lines;
-    top: 100px;
-    right: 80px;
+    top: 96px;
+    right: 96px;
   }
 }
 
@@ -131,8 +131,8 @@
 
 .corner-bottom-left {
   position: fixed;
-  bottom: 50px;
-  left: 80px;
+  bottom: 48px;
+  left: 96px;
 
   @keyframes dash {
     0% {
@@ -171,8 +171,8 @@
 
 .dotted-line {
   position: fixed;
-  bottom: 210px;
-  left: 81px;
+  bottom: 208px;
+  left: 96px;
   width: 3px;
   height: 5vh;
   border-left: var.$grey 3px dotted;
