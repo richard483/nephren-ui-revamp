@@ -4,17 +4,21 @@ function ItemList({
   text,
   className,
   pointColor,
+  redirectUrl,
 }: {
   text: string;
   className?: string;
   pointColor?: string;
+  redirectUrl?: string;
 }) {
   return (
     <>
-      <div className={`item ${className}`}>
-        <span className={`point ${pointColor}`} />
-        <span className="point-text">{text}</span>
-      </div>
+      <a href={redirectUrl || '/'} target="_blank" rel="noreferrer">
+        <div className={`item ${className}`}>
+          <span className={`point ${pointColor}`} />
+          <span className="point-text">{text}</span>
+        </div>
+      </a>
     </>
   );
 }

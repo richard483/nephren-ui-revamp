@@ -1,5 +1,10 @@
 @use "@variables" as var;
 
+a {
+  text-decoration: none;
+  color: var.$dark-grey;
+}
+
 .item {
   display: flex;
   align-items: start;
@@ -12,6 +17,7 @@
   height: 18px;
   background-color: var.$red;
   margin-right: 10px;
+  overflow: hidden;
 
   &-text {
     display: flex;
@@ -32,6 +38,22 @@
 
 .dark-grey {
   background-color: var.$dark-grey;
+}
+
+.point::before {
+  content: '';
+  position: absolute;
+  background: var.$bg;
+  filter: blur(2px);
+  opacity: 0.9;
+  height: 24px;
+  width: 4px;
+  transition: 0.7s;
+  transform: rotate(-20deg) translate(-16px);
+}
+
+.item:hover .point::before {
+  transform: rotate(-20deg) translate(16px, -8px);
 }
 
 

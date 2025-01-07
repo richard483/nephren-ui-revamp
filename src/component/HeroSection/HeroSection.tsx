@@ -14,10 +14,26 @@ function HeroSection() {
         <TextGrid />
         <h1 className="title">RICHARD WILLIAM</h1>
         <div className="items">
-          <ItemList text="GITHUB" pointColor="dark-grey" />
-          <ItemList text="LINKEDIN" pointColor="sky" />
-          <ItemList text="INSTAGRAM" pointColor="red" />
-          <ItemList text="TWITTER" pointColor="sky" />
+          <ItemList
+            text="GITHUB"
+            pointColor="dark-grey"
+            redirectUrl="https://github.com/richard483"
+          />
+          <ItemList
+            text="LINKEDIN"
+            pointColor="sky"
+            redirectUrl="https://www.linkedin.com/in/richard--william"
+          />
+          <ItemList
+            text="INSTAGRAM"
+            pointColor="red"
+            redirectUrl="https://www.instagram.com/richard__uwu/"
+          />
+          <ItemList
+            text="TWITTER"
+            pointColor="sky"
+            redirectUrl="https://x.com/zeccareva"
+          />
         </div>
         <div className="sub-content">
           <span className="sub-content-desc">Yes, I code</span>
