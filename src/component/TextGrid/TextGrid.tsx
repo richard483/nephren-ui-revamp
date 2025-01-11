@@ -1,4 +1,5 @@
 import './TextGrid.scss';
+import './TextGrid.tablet.scss';
 
 function TextGrid() {
   return (

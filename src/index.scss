@@ -26,3 +26,9 @@ html, body {
   font-style: normal;
   color: var.$dark-grey;
 }
+
+@media only screen and (max-width: 1200px) {
+  #root {
+    margin: 0 120px;
+  }
+}

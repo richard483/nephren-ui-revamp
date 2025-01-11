@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   position: relative;
   margin: 0 96px;
-  padding: 176px 0;
+  padding: 176px 0 120px;
   height: 100%;
   justify-content: space-between;
 }
@@ -32,14 +32,14 @@ h1 {
     @extend #box;
     background-color: rgba(var.$grey, 0.3);
     right: 0;
-    top: 112px;
+    top: 160px;
   }
 
   &-blue {
     @extend #box;
     background-color: rgba(var.$sky, 0.1);
     right: 96px;
-    top: 256px;
+    top: 320px;
   }
 
   &-x {
@@ -63,10 +63,10 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  align-items: end;
+  align-items: baseline;
 
   &-desc {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
 
@@ -74,7 +74,6 @@ h1 {
     display: flex;
     flex-direction: column;
     color: var.$sky;
-    font-size: 1.5rem;
 
     &-bar-code {
       font-family: "Libre Barcode 128", sans-serif;

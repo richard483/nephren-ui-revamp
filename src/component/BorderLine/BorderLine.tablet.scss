@@ -1,0 +1,50 @@
+@media only screen and (max-width: 1200px) {
+  
+  .corner-top-left {
+    left: 56px;
+
+    &-H {
+      @extend .corner-top-left;
+    }
+
+    &-V {
+      @extend .corner-top-left;
+    }
+  }
+
+  .cross-lines {
+    &-left {
+      @extend .cross-lines;
+      left: 56px;
+    }
+
+    &-right {
+      @extend .cross-lines;
+      right: 56px;
+    }
+  }
+
+  .cross-line {
+    &-long {
+      right: 88px;
+    }
+  }
+
+  .corner-bottom-left {
+    left: 56px;
+  }
+
+  .dotted-line {
+    left: 56px;
+  }
+
+  @keyframes extending-line-w {
+    100% {
+      width: 20vw;
+    }
+  }
+
+  .top-left {
+    left: 120px;
+  }
+}
