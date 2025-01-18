@@ -1,5 +1,5 @@
 import './ItemList.scss';
-import 'src/component/ItemList/ItemList.tablet-portrait.scss';
+import './ItemList.tablet-portrait.scss';
 
 function ItemList({
   text,
