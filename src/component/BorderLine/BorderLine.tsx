@@ -1,5 +1,6 @@
 import './BorderLine.scss';
 import './BorderLine.tablet.scss';
+import './BorderLine.phone.scss';
 import { useState } from 'react';
 import StrippedLines from '@component/StrippedLines/StrippedLines.tsx';
 

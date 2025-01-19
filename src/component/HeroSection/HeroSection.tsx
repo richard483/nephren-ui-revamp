@@ -1,6 +1,7 @@
 import './HeroSection.scss';
 import './HeroSection.tablet.scss';
 import './HeroSection.tablet-portrait.scss';
+import './HeroSection.phone.scss';
 import TextGrid from '@component/TextGrid/TextGrid.tsx';
 import ItemList from '@component/ItemList/ItemList.tsx';
 
