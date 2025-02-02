@@ -1,6 +1,7 @@
 import './TextGrid.scss';
 import './TextGrid.tablet.scss';
 import './TextGrid.tablet-portrait.scss';
+import './TextGrid.phone.scss';
 
 function TextGrid() {
   return (

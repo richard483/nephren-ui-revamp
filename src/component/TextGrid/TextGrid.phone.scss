@@ -1,0 +1,32 @@
+@use "@variables" as var;
+
+@media only screen and (max-width: 600px) {
+
+  .dots {
+    top: 320px;
+    left: calc(50% - 96px);
+    width: 88px;
+    height: 88px;
+    gap: 2px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: var.$dark-grey;
+
+    &-text {
+      @extend .dot;
+      background-color: rgba(var.$dark-grey, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+  }
+
+}
+
+
+

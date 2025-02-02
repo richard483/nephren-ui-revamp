@@ -32,3 +32,9 @@ html, body {
     margin: 0 120px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  #root {
+    margin: 0 32px;
+  }
+}
