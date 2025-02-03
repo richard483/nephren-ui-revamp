@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const configValue: string = import.meta.env.VITE_GOOGLE_TAG as string;
 
-function App() {
+function LandingPage() {
   useEffect(() => {
     ReactGA.initialize(configValue);
     ReactGA.send('pageview');
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default LandingPage;
