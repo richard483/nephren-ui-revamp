@@ -1,5 +1,4 @@
 import HeroSection from '@component/HeroSection/HeroSection.tsx';
-import BorderLine from '@component/BorderLine/BorderLine.tsx';
 import ReactGA from 'react-ga4';
 import { useEffect } from 'react';
 
@@ -12,7 +11,6 @@ function LandingPage() {
   });
   return (
     <>
-      <BorderLine />
       <HeroSection />
     </>
   );
