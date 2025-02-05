@@ -4,7 +4,9 @@ GlobalPipeline() {
 	dockerImage = "nephren-ui-revamp:latest"
 	projectName = "nephren-ui-revamp"
 	appPort = "3000"
+    networkName = "nephren-ui"
     buildArgs = [
-        VITE_GOOGLE_TAG: "${this.env.VITE_GOOGLE_TAG}"
+        VITE_GOOGLE_TAG: "${this.env.VITE_GOOGLE_TAG}",
+        VITE_NEPHREN_BLOG: "http://nephren-blogs:3001",
     ]
 }
