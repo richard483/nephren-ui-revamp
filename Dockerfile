@@ -22,4 +22,4 @@ RUN npm run build
 
 EXPOSE 7000
 
-CMD [ "serve", "-s", "dist" ]
+CMD [ "serve", "-s", "dist", "-l", "7000" ]
