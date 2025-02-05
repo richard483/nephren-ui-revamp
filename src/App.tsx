@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/hello-world" element={'Hello World!'} />
-        <Route path="/blogs" element={<RemoteBlogs />}></Route>
+        <Route path="/blogs/*" element={<RemoteBlogs />}></Route>
       </Routes>
     </BrowserRouter>
   );
