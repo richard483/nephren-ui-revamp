@@ -1,9 +1,8 @@
-@use "@variables" as var;
+@use '@variables' as var;
 
 @media only screen and (max-width: 600px) {
-
   .dots {
-    top: 320px;
+    top: 200px;
     left: calc(50% - 96px);
     width: 88px;
     height: 88px;
@@ -25,8 +24,4 @@
       font-size: 0.75rem;
     }
   }
-
 }
-
-
-

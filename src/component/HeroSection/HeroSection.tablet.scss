@@ -1,5 +1,4 @@
 @media only screen and (max-width: 1200px) {
-
   #box {
     width: 240px;
     height: 240px;
@@ -16,7 +15,7 @@
     &-x {
       @extend #box;
       right: calc(50% - 76px);
-      bottom: 20%;
+      bottom: 10%;
       width: 152px;
       height: 152px;
     }

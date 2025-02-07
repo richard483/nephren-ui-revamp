@@ -1,4 +1,4 @@
-@use "@variables" as var;
+@use '@variables' as var;
 
 * {
   margin: 0;
@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background-color: var.$bg;
   height: 100%;
   width: 100%;
@@ -18,10 +19,11 @@ html, body {
   height: 100%;
   width: 100%;
   padding: 0 0;
-  margin: 0 144px;
+  margin: 0 240px;
+  padding: 176px 0 120px;
   max-width: 1152px;
   text-align: center;
-  font-family: "Aldrich", sans-serif;
+  font-family: 'Aldrich', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var.$dark-grey;
@@ -36,5 +38,6 @@ html, body {
 @media only screen and (max-width: 600px) {
   #root {
     margin: 0 32px;
+    padding: 120px 0 48px;
   }
 }

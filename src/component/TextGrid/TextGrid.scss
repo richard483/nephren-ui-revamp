@@ -1,9 +1,8 @@
-@use "@variables" as var;
-
+@use '@variables' as var;
 
 .dots {
   position: absolute;
-  top: 50vh;
+  top: 32vh;
   right: 40%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -28,6 +27,3 @@
     align-items: center;
   }
 }
-
-
-

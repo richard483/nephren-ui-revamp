@@ -11,10 +11,6 @@
     align-items: center;
   }
 
-  .content-wrapper {
-    padding: 120px 0 48px;
-  }
-
   .sub-content {
     justify-content: end;
 
@@ -29,20 +25,20 @@
 
     &-grey {
       @extend #box;
-      top: 280px;
+      top: 160px;
       right: 56px;
     }
 
     &-blue {
       @extend #box;
       left: 56px;
-      top: 368px
+      top: 248px;
     }
 
     &-x {
       @extend #box;
       display: block;
-      top: 352px;
+      top: 232px;
       right: calc(50% - 96px);
       width: 88px;
       height: 88px;
