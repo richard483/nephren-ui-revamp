@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px) {
   .content-wrapper {
     align-items: center;
+    padding: 104px 0 32px;
   }
 
   h1 {
@@ -25,20 +26,20 @@
 
     &-grey {
       @extend #box;
-      top: 160px;
+      top: 264px;
       right: 56px;
     }
 
     &-blue {
       @extend #box;
       left: 56px;
-      top: 248px;
+      top: 352px;
     }
 
     &-x {
       @extend #box;
       display: block;
-      top: 232px;
+      top: 336px;
       right: calc(50% - 96px);
       width: 88px;
       height: 88px;
