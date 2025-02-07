@@ -37,6 +37,11 @@ function HeroSection() {
             pointColor="sky"
             redirectUrl="https://x.com/zeccareva"
           />
+          <ItemList
+            text="MY BLOGS"
+            pointColor="dark-grey"
+            redirectUrl="https://nephren.xyz/blogs"
+          />
         </div>
         <div className="sub-content">
           <span className="sub-content-desc">Yes, I code</span>
