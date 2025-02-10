@@ -21,7 +21,7 @@ function App() {
         </Route>
         <Route path="/hello-world" element={'Hello World!'} />
         <Route path="/blogs" element={<BorderLineRight />}>
-          <Route path="blogs/*" element={<RemoteBlogs />} />
+          <Route path="/blogs" element={<RemoteBlogs />} />
         </Route>
       </Routes>
     </BrowserRouter>
