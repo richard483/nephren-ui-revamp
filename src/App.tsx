@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import BorderLine from './component/BorderLine/BorderLine';
 import ReactGA from 'react-ga4';
+import BorderLineRight from './component/BorderLineRight/BorderLineRight';
 
 const RemoteBlogs = lazy(() => import('blogs/App'));
 const configValue: string = import.meta.env.VITE_GOOGLE_TAG as string;
@@ -14,11 +15,14 @@ function App() {
   });
   return (
     <BrowserRouter>
-      <BorderLine />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<BorderLine />}>
+          <Route path="/" element={<LandingPage />} />
+        </Route>
         <Route path="/hello-world" element={'Hello World!'} />
-        <Route path="/blogs/*" element={<RemoteBlogs />}></Route>
+        <Route path="/blogs" element={<BorderLineRight />}>
+          <Route path="blogs/*" element={<RemoteBlogs />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

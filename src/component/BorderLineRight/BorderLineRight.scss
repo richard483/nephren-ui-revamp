@@ -1,0 +1,71 @@
+@use '@variables' as var;
+
+.cross-lines {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &-left {
+    @extend .cross-lines;
+    top: 124px;
+    left: 96px;
+  }
+
+  &-right {
+    @extend .cross-lines;
+    top: 96px;
+    right: 96px;
+  }
+}
+
+.cross-line {
+  width: 36px;
+  height: 12px;
+  background-color: var.$grey;
+  transform: skewY(-45deg);
+
+  @keyframes fading {
+    0% {
+      opacity: 0.05;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &-red {
+    @extend .cross-line;
+    background-color: var.$red;
+    animation: fading 0.1s ease-out forwards;
+    -webkit-animation: fading 0.1s ease-out forwards;
+    -o-animation: fading 0.1s ease-out forwards;
+    -moz-animation: fading 0.1s ease-out forwards;
+  }
+
+  @keyframes extending-line-h {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: calc(100vh - 400px);
+    }
+  }
+
+  &-long {
+    position: fixed;
+    top: 312px;
+    right: 128px;
+    width: 3px;
+    height: 0;
+    animation: extending-line-h 1s cubic-bezier(0.21, 0.52, 0.19, 0.83) forwards;
+    -webkit-animation: extending-line-h 1s cubic-bezier(0.21, 0.52, 0.19, 0.83)
+      forwards;
+    -o-animation: extending-line-h 1s cubic-bezier(0.21, 0.52, 0.19, 0.83)
+      forwards;
+    -moz-animation: extending-line-h 1s cubic-bezier(0.21, 0.52, 0.19, 0.83)
+      forwards;
+    transform-origin: top;
+    background-color: var.$grey;
+  }
+}

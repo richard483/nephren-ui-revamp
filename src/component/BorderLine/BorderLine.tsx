@@ -3,6 +3,7 @@ import './BorderLine.tablet.scss';
 import './BorderLine.phone.scss';
 import { useState } from 'react';
 import StrippedLines from '@component/StrippedLines/StrippedLines.tsx';
+import { Outlet } from 'react-router-dom';
 
 function BorderLine() {
   const [crossLineLStart, setCrossLineLStart] = useState<boolean>(false);
@@ -68,6 +69,7 @@ function BorderLine() {
           </svg>
         </div>
       )}
+      <Outlet />
     </>
   );
 }
