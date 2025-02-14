@@ -4,6 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*:-webkit-scrollbar {
+  display: none;
 }
 
 html,
@@ -12,15 +17,15 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
+  // flex-direction: column;
   justify-content: center;
 }
 
 #root {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  margin: 0 240px;
-  padding: 96px 0;
-  max-width: 1152px;
   text-align: center;
   font-family: 'Aldrich', sans-serif;
   font-weight: 400;
@@ -28,15 +33,26 @@ body {
   color: var.$dark-grey;
 }
 
+#app {
+  height: inherit;
+  width: 100%;
+  // margin: 0 240px;
+  padding: 96px 240px;
+  max-width: 1652px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var.$bg;
+}
+
 @media only screen and (max-width: 1200px) {
-  #root {
-    margin: 0 120px;
+  #app {
+    padding: 96px 120px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  #root {
-    margin: 0 32px;
-    padding: 16px 0;
+  #app {
+    padding: 16px 32px;
   }
 }

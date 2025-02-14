@@ -1,24 +1,88 @@
 @use '@variables' as var;
 
-.footer-wrapper {
-  padding: 5vh 0;
+footer {
+  background-color: var.$dark-grey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
+footer * {
+  color: var.$white;
+}
 
-  &__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+.footer-wrapper {
+  padding: 5vh 0;
+  width: 100%;
+  max-width: 1152px;
+
+}
+
+.footer {
+
+  &-tech {
+    margin: 3rem 0;
+
+    &__description {
+      a {
+        text-decoration: underline;
+      }
+    }
   }
 
-  &__right {
+  &-content {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+      &__mail {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1rem;
+
+        textarea {
+          width: 25vw;
+          height: 10vw;
+          background-color: var.$white;
+          color: var.$midnight;
+          padding: 0.5rem;
+          resize: none;
+        }
+
+        textarea::placeholder {
+          color: rgba(var.$midnight, 0.25);
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          background-color: var.$sky;
+          color: var.$white;
+          padding: 0.25rem 0.75rem;
+        }
+
+        a:hover {
+          background-color: var.$red;
+        }
+      }
+    }
+
+    &__right {
+      color: var.$white;
+      ;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: end;
+    }
   }
+
 }

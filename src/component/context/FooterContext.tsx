@@ -13,8 +13,8 @@ export const useFooter = () => useContext(FooterContext);
 export const FooterProvider = ({ children }: { children: React.ReactNode }) => {
   const [isFooterVisible, setFooterVisibility] = useState<boolean>(true);
 
-  const hideFooter = () => setFooterVisibility(false);
-  const showFooter = () => setFooterVisibility(true);
+  const hideFooter = () => { setFooterVisibility(false); };
+  const showFooter = () => { setFooterVisibility(true); };
 
   return (
     <FooterContext.Provider value={{ isFooterVisible, showFooter, hideFooter }}>

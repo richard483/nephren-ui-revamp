@@ -10,7 +10,7 @@ import x_pattern from '@assets/x_pattern.svg';
 function HeroSection() {
   return (
     <>
-      <div className="content-wrapper">
+      <div className="hero-wrapper">
         <span id="box-grey" />
         <span id="box-blue" />
         <img id="box-x" src={x_pattern} />
