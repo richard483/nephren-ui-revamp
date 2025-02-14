@@ -1,0 +1,24 @@
+@use '@variables' as var;
+
+.footer-wrapper {
+  padding: 5vh 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
+}
