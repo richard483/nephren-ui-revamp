@@ -35,22 +35,36 @@ function Footer() {
                 <h2 className="footer-content__right__title">Follow Me on the other social media!</h2>
                 <div className="footer-content__right__social">
                   <a
-                    href="https://www.facebook.com"
+                    href="https://github.com/richard483"
                     className="footer-content__right__social__icon"
+                    target="_blank" rel="noreferrer"
                   >
-                    <img src="/images/facebook.png" alt="facebook" />
+                    richard483
+                    <img src="/img/github.svg" alt="github" />
                   </a>
                   <a
-                    href="https://www.twitter.com"
+                    href="https://twitter.com/zeccareva"
                     className="footer-content__right__social__icon"
+                    target="_blank" rel="noreferrer"
                   >
-                    <img src="/images/twitter.png" alt="twitter" />
+                    zeccareva
+                    <img src="/img/twitter.svg" alt="twitter" />
                   </a>
                   <a
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/richard__uwu/"
                     className="footer-content__right__social__icon"
+                    target="_blank" rel="noreferrer"
                   >
-                    <img src="/images/instagram.png" alt="instagram" />
+                    richard__uwu
+                    <img src="/img/instagram.svg" alt="instagram" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/richard--william/"
+                    className="footer-content__right__social__icon"
+                    target="_blank" rel="noreferrer"
+                  >
+                    richard--william
+                    <img className='linkedin' src="/img/linkedin.svg" alt="instagram" />
                   </a>
                 </div>
               </div>
@@ -63,13 +77,13 @@ function Footer() {
                   href="https://github.com/richard483/nephren-ui-revamp">
                   GitHub
                 </a>.
-                This site and all of it's infrastructure is hosted on{' '}
+                This site and all of it&apos;s infrastructure is hosted on{' '}
                 <a href="https://x.com/zeccareva/status/1863449989458128953">this laptop</a>.
               </p>
             </div>
             <div>
               <p className="footer-copy-right">
-                2025 Nephren.xyz
+                2025 nephren.xyz
               </p>
             </div>
           </div>

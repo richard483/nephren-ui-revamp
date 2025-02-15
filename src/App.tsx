@@ -21,10 +21,8 @@ function App() {
             <Route path="/" element={<LandingPage />} />
           </Route>
           <Route path="/hello-world" element={'Hello World!'} />
-          <Route path="/blogs" element={<BorderLineRight />}>
-            <Route path="/blogs" element={<RemoteBlogs />} />
-            <Route path="/blogs/*" element={<RemoteBlogs />} />
-          </Route>
+          <Route path="/blogs/*" element={<>
+            <RemoteBlogs /><BorderLineRight /></>} />
         </Routes>
       </BrowserRouter>
     </div>
