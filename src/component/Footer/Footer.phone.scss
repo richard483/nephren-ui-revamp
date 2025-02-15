@@ -1,5 +1,22 @@
 @media only screen and (max-width: 600px) {
   .footer-wrapper {
-    padding: 16px 32px;
+    padding: 16px 48px;
+  }
+
+  .footer-content__left {
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+
+  .footer-content__right {
+    &__title {
+      font-size: 1.25rem;
+      max-width: 40vw;
+    }
+  }
+
+  .footer-content__right__social {
+    gap: 0.5rem;
   }
 }
