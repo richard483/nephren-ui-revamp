@@ -1,12 +1,12 @@
 import {
-  FooterContextProps,
-  useFooter,
-} from '@/component/context/FooterContext';
+  HeaderFooterContextProps,
+  useHeaderFooter,
+} from '@/component/context/UiContext';
 import HeroSection from '@component/HeroSection/HeroSection.tsx';
 
 function LandingPage() {
-  const { hideFooter } = useFooter() as FooterContextProps;
-  hideFooter();
+  const { hideHeaderFooter: hideHeaderFooter } = useHeaderFooter() as HeaderFooterContextProps;
+  hideHeaderFooter();
   return (
     <>
       <HeroSection />

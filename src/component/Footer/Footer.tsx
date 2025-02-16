@@ -2,11 +2,11 @@ import './Footer.scss';
 import './Footer.tablet.scss';
 import './Footer.tablet-portrait.scss';
 import './Footer.phone.scss';
-import { FooterContextProps, useFooter } from '../context/FooterContext';
+import { HeaderFooterContextProps, useHeaderFooter } from '../context/UiContext';
 import { useState } from 'react';
 
 function Footer() {
-  const { isFooterVisible } = useFooter() as FooterContextProps;
+  const { isHeaderFooterVisible: isFooterVisible } = useHeaderFooter() as HeaderFooterContextProps;
   const [message, setMessage] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
