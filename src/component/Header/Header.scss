@@ -1,0 +1,59 @@
+@use '@variables' as var;
+
+header {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 240px);
+
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    img {
+      width: 20px;
+      height: 20px;
+
+
+      &:hover {
+        filter: opacity(0.5);
+      }
+    }
+  }
+}
+
+
+.header {
+  &__content {
+    padding-right: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+
+    .sky-text:hover {
+      color: var.$sky;
+    }
+
+    .red-text:hover {
+      color: var.$red;
+    }
+  }
+
+  &__link {
+    &__underline {
+      margin-top: 2px;
+      display: block;
+      width: 100%;
+      height: 2px;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      & .header__link__underline {
+        background-color: var.$dark-grey;
+      }
+    }
+  }
+
+}

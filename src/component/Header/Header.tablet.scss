@@ -1,0 +1,9 @@
+@media only screen and (max-width: 1200px) {
+  .header__content {
+    padding-right: 80px;
+  }
+
+  header {
+    width: calc(100% - 120px);
+  }
+}

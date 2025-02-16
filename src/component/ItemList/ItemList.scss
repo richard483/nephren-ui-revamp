@@ -28,18 +28,6 @@ a {
   }
 }
 
-.red {
-  background-color: var.$red;
-}
-
-.sky {
-  background-color: var.$sky;
-}
-
-.dark-grey {
-  background-color: var.$dark-grey;
-}
-
 .point::before {
   content: '';
   position: absolute;
@@ -55,5 +43,3 @@ a {
 .item:hover .point::before {
   transform: rotate(-20deg) translate(16px, -8px);
 }
-
-

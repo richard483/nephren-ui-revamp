@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+  .header__content {
+    padding-right: 16px;
+    gap: 32px;
+  }
+
+  header {
+    width: calc(100% - 56px);
+  }
+}

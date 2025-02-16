@@ -6,7 +6,7 @@ import { HeaderFooterContextProps, useHeaderFooter } from '../context/UiContext'
 import { useState } from 'react';
 
 function Footer() {
-  const { isHeaderFooterVisible: isFooterVisible } = useHeaderFooter() as HeaderFooterContextProps;
+  const { isHeaderFooterVisible: isHeaderFooterVisible } = useHeaderFooter() as HeaderFooterContextProps;
   const [message, setMessage] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -20,7 +20,7 @@ function Footer() {
   };
   return (
     <>
-      {isFooterVisible && (
+      {isHeaderFooterVisible && (
         <footer>
           <div className="footer-wrapper">
             <div className="footer-content">

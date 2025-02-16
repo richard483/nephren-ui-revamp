@@ -10,7 +10,7 @@ const HeaderFooterContext = createContext<HeaderFooterContextProps | undefined>(
 
 export const useHeaderFooter = () => useContext(HeaderFooterContext);
 
-export const FooterProvider = ({ children }: { children: React.ReactNode }) => {
+export const HeaderFooterProvider = ({ children }: { children: React.ReactNode }) => {
   const [isFooterVisible, setFooterVisibility] = useState<boolean>(true);
 
   const hideHeaderFooter = () => { setFooterVisibility(false); };
