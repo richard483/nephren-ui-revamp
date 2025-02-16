@@ -67,15 +67,35 @@ footer * {
         }
 
         a {
+          position: relative;
           text-decoration: none;
           font-size: 1rem;
           background-color: var.$sky;
           color: var.$white;
           padding: 0.25rem 0.75rem;
+          overflow: hidden;
         }
 
         a:hover {
           background-color: var.$red;
+          transition: 0.25s;
+          // transform: rotate(-20deg) translate(16px, -8px);
+        }
+
+        a::before {
+          content: '';
+          position: absolute;
+          background: var.$bg;
+          filter: blur(2px);
+          opacity: 0.9;
+          height: 56px;
+          width: 8px;
+          transition: 0.7s;
+          transform: rotate(-20deg) translate(-32px, -8px);
+        }
+
+        &:hover a::before {
+          transform: rotate(-20deg) translate(104px, 0px);
         }
       }
     }
