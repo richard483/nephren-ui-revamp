@@ -4,7 +4,7 @@ header {
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
-  width: calc(100% - 240px);
+  width: 100%;
 
   button {
     border: none;
@@ -25,8 +25,12 @@ header {
 
 
 .header {
+  &__back {
+    padding-left: 120px;
+  }
+
   &__content {
-    padding-right: 120px;
+    padding-right: 240px;
     display: flex;
     justify-content: center;
     gap: 56px;

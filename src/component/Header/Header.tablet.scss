@@ -1,9 +1,9 @@
 @media only screen and (max-width: 1200px) {
   .header__content {
-    padding-right: 80px;
+    padding-right: 120px;
   }
 
-  header {
-    width: calc(100% - 120px);
+  .header__back {
+    padding-left: 56px;
   }
 }
