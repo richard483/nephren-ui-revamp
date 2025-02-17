@@ -1,7 +1,4 @@
-import './Footer.scss';
-import './Footer.tablet.scss';
-import './Footer.tablet-portrait.scss';
-import './Footer.phone.scss';
+import styles from './Footer.module.scss';
 import {
   HeaderFooterContextProps,
   useHeaderFooter,
@@ -25,12 +22,12 @@ function Footer() {
   return (
     <>
       {isHeaderFooterVisible && (
-        <footer>
-          <div className="footer-wrapper">
-            <div className="footer-content">
-              <div className="footer-content__left">
-                <h2 className="footer-content__left__title">Contact Me</h2>
-                <p className="footer-content__left__mail">
+        <footer className={styles.footer}>
+          <div className={styles['footer-wrapper']}>
+            <div className={styles['footer-content']}>
+              <div className={styles['footer-content__left']}>
+                <h2 className={styles['footer-content__left']}>Contact Me</h2>
+                <p className={styles['footer-content__left__mail']}>
                   <textarea
                     placeholder="Write me a mail"
                     value={message}
@@ -39,14 +36,14 @@ function Footer() {
                   <a href={getMailToLink()}>Mail me</a>
                 </p>
               </div>
-              <div className="footer-content__right">
-                <h2 className="footer-content__right__title">
+              <div className={styles['footer-content__right']}>
+                <h2 className={styles['footer-content__right__title']}>
                   Follow Me on the other social media!
                 </h2>
-                <div className="footer-content__right__social">
+                <div className={styles['footer-content__right__social']}>
                   <a
                     href="https://github.com/richard483"
-                    className="footer-content__right__social__icon"
+                    className={styles['footer-content__right__social__icon']}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -55,7 +52,7 @@ function Footer() {
                   </a>
                   <a
                     href="https://twitter.com/zeccareva"
-                    className="footer-content__right__social__icon"
+                    className={styles['footer-content__right__social__icon']}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -64,7 +61,7 @@ function Footer() {
                   </a>
                   <a
                     href="https://www.instagram.com/richard__uwu/"
-                    className="footer-content__right__social__icon"
+                    className={styles['footer-content__right__social__icon']}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -73,7 +70,7 @@ function Footer() {
                   </a>
                   <a
                     href="https://www.linkedin.com/in/richard--william/"
-                    className="footer-content__right__social__icon"
+                    className={styles['footer-content__right__social__icon']}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -87,8 +84,8 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div className="footer-tech">
-              <p className="footer-tech__description">
+            <div className={styles['footer-tech']}>
+              <p className={styles['footer-tech__description']}>
                 This website is built using React, TypeScript, and SCSS. The
                 source code is available on{' '}
                 <a href="https://github.com/richard483/nephren-ui-revamp">
@@ -102,7 +99,7 @@ function Footer() {
               </p>
             </div>
             <div>
-              <p className="footer-copy-right">2025 nephren.xyz</p>
+              <p className={styles['footer-copy-right']}>2025 nephren.xyz</p>
             </div>
           </div>
         </footer>

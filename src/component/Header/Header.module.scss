@@ -9,6 +9,11 @@
 }
 
 .header {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
   &__back {
     padding-left: 120px;
   }
@@ -47,11 +52,6 @@
       }
     }
   }
-
-  margin-top: 32px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 
   button {
     border: none;
