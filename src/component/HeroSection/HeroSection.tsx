@@ -1,7 +1,4 @@
-import './HeroSection.scss';
-import './HeroSection.tablet.scss';
-import './HeroSection.tablet-portrait.scss';
-import './HeroSection.phone.scss';
+import styles from './HeroSection.module.scss';
 import TextGrid from '@component/TextGrid/TextGrid.tsx';
 import ItemList from '@component/ItemList/ItemList.tsx';
 
@@ -10,13 +7,13 @@ import x_pattern from '@assets/x_pattern.svg';
 function HeroSection() {
   return (
     <>
-      <div className="hero-wrapper">
-        <span id="box-grey" />
-        <span id="box-blue" />
-        <img id="box-x" src={x_pattern} />
+      <div className={styles['hero-wrapper']}>
+        <span className={styles['box-grey']} />
+        <span className={styles['box-blue']} />
+        <img className={styles['box-x']} src={x_pattern} />
         <TextGrid />
-        <h1 className="title">RICHARD WILLIAM</h1>
-        <div className="items">
+        <h1 className={styles.title}>RICHARD WILLIAM</h1>
+        <div className={styles.items}>
           <ItemList
             text="GITHUB"
             pointColor="dark-grey"
@@ -43,11 +40,13 @@ function HeroSection() {
             redirectUrl="https://nephren.xyz/blogs"
           />
         </div>
-        <div className="sub-content">
-          <span className="sub-content-desc">Yes, I code</span>
-          <div className="sub-content-nephren">
-            <span className="sub-content-nephren-bar-code">nephren</span>
-            <span className="sub-content-nephren-desc">nephren</span>
+        <div className={styles['sub-content']}>
+          <span className={styles['sub-content-desc']}>Yes, I code</span>
+          <div className={styles['sub-content-nephren']}>
+            <span className={styles['sub-content-nephren-bar-code']}>
+              nephren
+            </span>
+            <span className={styles['sub-content-nephren-desc']}>nephren</span>
           </div>
         </div>
       </div>
