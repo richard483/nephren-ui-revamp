@@ -7,6 +7,11 @@
   scrollbar-width: none;
 }
 
+a {
+  text-decoration: none;
+  color: var.$dark-grey;
+}
+
 *:-webkit-scrollbar {
   display: none;
 }
@@ -19,7 +24,6 @@ body {
   // flex-direction: column;
   justify-content: center;
 }
-
 
 #root {
   display: flex;

@@ -1,7 +1,4 @@
-import './Header.scss';
-import './Header.tablet.scss';
-import './Header.tablet-portrait.scss';
-import './Header.phone.scss';
+import styles from './Header.module.scss';
 import {
   HeaderFooterContextProps,
   useHeaderFooter,
@@ -13,23 +10,33 @@ function Header() {
   return (
     <>
       {isFooterVisible && (
-        <header>
+        <header className={styles.header}>
           <button
             onClick={() => {
               window.history.back();
             }}
-            className="header__back"
+            className={styles.header__back}
           >
             <img src="/img/back.svg" alt="back" />
           </button>
-          <div className="header__content">
-            <a href="/blogs" className="header__link sky-text">
+          <div className={styles.header__content}>
+            <a
+              href="/blogs"
+              className={`${styles.header__link} ${styles['sky-text']}`}
+            >
               blogs
-              <span className="header__link__underline sky" />
+              <span
+                className={`${styles.header__link__underline} ${styles.sky}`}
+              />
             </a>
-            <a href="/" className="header__link red-text">
+            <a
+              href="/"
+              className={`${styles.header__link} ${styles['red-text']}`}
+            >
               landing
-              <span className="header__link__underline red" />
+              <span
+                className={`${styles.header__link__underline} ${styles.red}`}
+              />
             </a>
           </div>
         </header>

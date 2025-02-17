@@ -1,0 +1,97 @@
+@use '@variables' as var;
+
+.red {
+  background-color: var.$red;
+}
+
+.sky {
+  background-color: var.$sky;
+}
+
+.header {
+  &__back {
+    padding-left: 120px;
+  }
+
+  &__content {
+    padding-right: 240px;
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+
+    .sky-text:hover {
+      color: var.$sky;
+    }
+
+    .red-text:hover {
+      color: var.$red;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+    &__underline {
+      margin-top: 2px;
+      display: block;
+      width: 100%;
+      height: 2px;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      & .header__link__underline {
+        background-color: var.$dark-grey;
+      }
+    }
+  }
+
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    img {
+      width: 20px;
+      height: 20px;
+
+      &:hover {
+        filter: opacity(0.5);
+      }
+    }
+  }
+}
+
+// tablet
+@media only screen and (max-width: 1200px) {
+  .header__content {
+    padding-right: 120px;
+  }
+
+  .header__back {
+    padding-left: 56px;
+  }
+}
+
+// phone
+@media only screen and (max-width: 600px) {
+  .header__content {
+    padding-right: 16px;
+    gap: 32px;
+  }
+
+  .header {
+    width: calc(100% - 56px);
+  }
+
+  .header__back {
+    padding-left: 16px;
+  }
+}
