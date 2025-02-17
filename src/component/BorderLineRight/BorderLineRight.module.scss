@@ -7,13 +7,19 @@
   gap: 8px;
 
   &-left {
-    @extend .cross-lines;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     top: 124px;
     left: 96px;
   }
 
   &-right {
-    @extend .cross-lines;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     top: 96px;
     right: 96px;
   }
@@ -67,5 +73,71 @@
       forwards;
     transform-origin: top;
     background-color: var.$grey;
+  }
+}
+
+//table
+
+@media only screen and (max-width: 1200px) {
+  .cross-lines {
+    &-left {
+      left: 56px;
+    }
+
+    &-right {
+      right: 56px;
+    }
+  }
+
+  .cross-line {
+    &-long {
+      right: 88px;
+    }
+  }
+}
+
+//phone
+
+@media only screen and (max-width: 600px) {
+  .cross-line {
+    width: 24px;
+    height: 8px;
+
+    @keyframes extending-line-h {
+      100% {
+        height: calc(100% - 200px);
+      }
+    }
+
+    &-long {
+      top: 192px;
+      right: 30px;
+    }
+
+    &-red {
+      width: 24px;
+      height: 8px;
+    }
+  }
+
+  .cross-lines {
+    &-left {
+      left: 8px;
+      top: 40px;
+    }
+
+    &-right {
+      right: 8px;
+      top: 16px;
+    }
+  }
+
+  .corner-bottom-left {
+    left: 8px;
+    bottom: -16px;
+
+    &-path {
+      d: path('M152 120 H56 L1.28 72 V0');
+    }
   }
 }
