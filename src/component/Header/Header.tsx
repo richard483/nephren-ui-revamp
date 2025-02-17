@@ -2,15 +2,24 @@ import './Header.scss';
 import './Header.tablet.scss';
 import './Header.tablet-portrait.scss';
 import './Header.phone.scss';
-import { HeaderFooterContextProps, useHeaderFooter } from '../context/UiContext';
+import {
+  HeaderFooterContextProps,
+  useHeaderFooter,
+} from '../../context/UiContext';
 
 function Header() {
-  const { isHeaderFooterVisible: isFooterVisible } = useHeaderFooter() as HeaderFooterContextProps;
+  const { isHeaderFooterVisible: isFooterVisible } =
+    useHeaderFooter() as HeaderFooterContextProps;
   return (
     <>
       {isFooterVisible && (
         <header>
-          <button onClick={() => { window.history.back(); }} className="header__back">
+          <button
+            onClick={() => {
+              window.history.back();
+            }}
+            className="header__back"
+          >
             <img src="/img/back.svg" alt="back" />
           </button>
           <div className="header__content">
