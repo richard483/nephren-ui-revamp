@@ -13,7 +13,7 @@
 
     &-long {
       top: 192px;
-      right: 30px;
+      right: 24px;
     }
 
     &-red {
@@ -30,7 +30,7 @@
 
     &-right {
       @extend .cross-lines;
-      right: 8px;
+      right: 2px;
       top: 16px;
     }
   }
