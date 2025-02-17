@@ -1,6 +1,4 @@
-import './ItemList.scss';
-import './ItemList.tablet-portrait.scss';
-import './ItemList.phone.scss';
+import styles from './ItemList.module.scss';
 
 function ItemList({
   text,
@@ -15,10 +13,21 @@ function ItemList({
 }) {
   return (
     <>
-      <a href={redirectUrl || '/'} target="_blank" rel="noreferrer">
-        <div className={`item ${className as string}`}>
-          <span className={`point ${pointColor as string}`} />
-          <span className={`point-text ${pointColor as string}-txt`}>{text}</span>
+      <a
+        className={styles.anchor}
+        href={redirectUrl || '/'}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div className={`${styles['item']} ${styles[className as string]}`}>
+          <span
+            className={`${styles['point']} ${styles[pointColor as string]}`}
+          />
+          <span
+            className={`${styles['point-text']} ${styles[(pointColor as string) + '-txt']}`}
+          >
+            {text}
+          </span>
         </div>
       </a>
     </>
