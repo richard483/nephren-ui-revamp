@@ -14,15 +14,22 @@ function App() {
     ReactGA.send('pageview');
   });
   return (
-    <div id='app'>
+    <div id="app">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<BorderLine />}>
             <Route path="/" element={<LandingPage />} />
           </Route>
           <Route path="/hello-world" element={'Hello World!'} />
-          <Route path="/blogs/*" element={<>
-            <RemoteBlogs /><BorderLineRight /></>} />
+          <Route
+            path="/blogs/*"
+            element={
+              <>
+                <RemoteBlogs />
+                <BorderLineRight />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

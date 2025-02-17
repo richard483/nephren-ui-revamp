@@ -1,4 +1,6 @@
-import styles from './BorderLine.module.scss';
+import './BorderLine.scss';
+import './BorderLine.tablet.scss';
+import './BorderLine.phone.scss';
 import { useState } from 'react';
 import StrippedLines from '@component/StrippedLines/StrippedLines.tsx';
 import { Outlet } from 'react-router-dom';
@@ -12,10 +14,10 @@ function BorderLine() {
 
   return (
     <>
-      <div className={styles['corner-top-left']}>
-        <span className={styles['corner-top-left-H']} />
+      <div className="corner-top-left">
+        <span className="corner-top-left-H" />
         <span
-          className={styles['corner-top-left-V']}
+          className="corner-top-left-V"
           onAnimationEndCapture={() => {
             setCrossLineLStart(true);
           }}
@@ -23,7 +25,7 @@ function BorderLine() {
       </div>
       {crossLineLStart && (
         <StrippedLines
-          className={styles['cross-lines-left']}
+          className="cross-lines-left"
           numberOfLines={5}
           itemClassName="cross-line"
           onAnimationEndCapture={() => {
@@ -33,7 +35,7 @@ function BorderLine() {
       )}
       {topLeftLineStart && (
         <span
-          className={styles['top-left']}
+          className="top-left"
           onAnimationEndCapture={() => {
             setCrossLineRStart(true);
           }}
@@ -42,24 +44,24 @@ function BorderLine() {
       {crossLineRStart && (
         <StrippedLines
           numberOfLines={9}
-          className={styles['cross-lines-right']}
+          className="cross-lines-right"
           itemClassName="cross-line"
           onAnimationEndCapture={() => {
             setCornerBottomLStart(true);
           }}
         >
           <>
-            <span className={styles['cross-line-red']} />
-            <span className={styles['cross-line-long']} />
+            <span className="cross-line-red" />
+            <span className="cross-line-long" />
           </>
         </StrippedLines>
       )}
       {cornerBottomLStart && (
-        <div className={styles['corner-bottom-left']}>
-          {dottedLineStart && <span className={styles['dotted-line']} />}
-          <svg className={styles['svg']}>
+        <div className="corner-bottom-left">
+          {dottedLineStart && <span className="dotted-line" />}
+          <svg className="svg">
             <path
-              className={styles['corner-bottom-left-path']}
+              className="corner-bottom-left-path"
               onAnimationEndCapture={() => {
                 setDottedLineStart(true);
               }}

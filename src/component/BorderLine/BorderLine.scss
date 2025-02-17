@@ -24,9 +24,7 @@
   }
 
   &-H {
-    position: fixed;
-    top: 96px;
-    left: 96px;
+    @extend .corner-top-left;
     width: 30px;
     height: 3px;
     background-color: var.$grey;
@@ -34,9 +32,7 @@
   }
 
   &-V {
-    position: fixed;
-    top: 96px;
-    left: 96px;
+    @extend .corner-top-left;
     width: 3px;
     height: 30px;
     background-color: var.$grey;
@@ -76,19 +72,13 @@
   gap: 8px;
 
   &-left {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    @extend .cross-lines;
     top: 124px;
     left: 96px;
   }
 
   &-right {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    @extend .cross-lines;
     top: 96px;
     right: 96px;
   }
@@ -196,134 +186,4 @@
   -webkit-animation: extending-line-dot 1s ease-out forwards;
   -o-animation: extending-line-dot 1s ease-out forwards;
   -moz-animation: extending-line-dot 1s ease-out forwards;
-}
-
-// tablet
-@media only screen and (max-width: 1200px) {
-  .corner-top-left {
-    left: 56px;
-
-    &-H {
-      left: 56px;
-    }
-
-    &-V {
-      left: 56px;
-    }
-  }
-
-  .cross-lines {
-    &-left {
-      left: 56px;
-    }
-
-    &-right {
-      right: 56px;
-    }
-  }
-
-  .cross-line {
-    &-long {
-      right: 88px;
-    }
-  }
-
-  .corner-bottom-left {
-    left: 56px;
-  }
-
-  .dotted-line {
-    left: 56px;
-  }
-
-  @keyframes extending-line-w {
-    100% {
-      width: 20vw;
-    }
-  }
-
-  .top-left {
-    left: 120px;
-  }
-}
-
-// phone
-@media only screen and (max-width: 600px) {
-  .cross-line {
-    width: 24px;
-    height: 8px;
-
-    @keyframes extending-line-h {
-      100% {
-        height: calc(100% - 200px);
-      }
-    }
-
-    &-long {
-      top: 192px;
-      right: 30px;
-    }
-
-    &-red {
-      @extend .cross-line;
-    }
-  }
-
-  .corner-top-left {
-    left: 8px;
-    top: 16px;
-
-    @keyframes left-H {
-      100% {
-        width: 24px;
-      }
-    }
-
-    @keyframes left-V {
-      100% {
-        height: 24px;
-      }
-    }
-
-    &-H {
-      left: 8px;
-      top: 16px;
-    }
-
-    &-V {
-      left: 8px;
-      top: 16px;
-    }
-  }
-
-  .cross-lines {
-    &-left {
-      left: 8px;
-      top: 40px;
-    }
-
-    &-right {
-      right: 8px;
-      top: 16px;
-    }
-  }
-
-  .corner-bottom-left {
-    left: 8px;
-    bottom: -16px;
-
-    &-path {
-      d: path('M152 120 H56 L1.28 72 V0');
-    }
-  }
-
-  .dotted-line {
-    bottom: 144px;
-    left: 8px;
-  }
-
-  .top-left {
-    top: 16px;
-    left: 56px;
-  }
 }

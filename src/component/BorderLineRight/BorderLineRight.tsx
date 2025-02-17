@@ -1,4 +1,6 @@
-import styles from './BorderLineRight.module.scss';
+import './BorderLineRight.scss';
+import './BorderLineRight.tablet.scss';
+import './BorderLineRight.phone.scss';
 import StrippedLines from '@component/StrippedLines/StrippedLines.tsx';
 import { Outlet } from 'react-router-dom';
 
@@ -7,12 +9,12 @@ function BorderLineRight() {
     <>
       <StrippedLines
         numberOfLines={9}
-        className={styles['cross-lines-right']}
+        className="cross-lines-right"
         itemClassName="cross-line"
       >
         <>
-          <span className={styles['cross-line-red']} />
-          <span className={styles['cross-line-long']} />
+          <span className="cross-line-red" />
+          <span className="cross-line-long" />
         </>
       </StrippedLines>
       <Outlet />
