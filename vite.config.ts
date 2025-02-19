@@ -18,7 +18,13 @@ export default defineConfig(({ mode }) => {
         remotes: {
           blogs: `${env.VITE_NEPHREN_BLOG}/assets/remoteEntry.js`,
         },
-        shared: ['react', 'react-dom', 'react-router-dom', 'react-ga4'],
+        shared: [
+          'react',
+          'react-dom',
+          'react-router-dom',
+          'react-ga4',
+          'react-helmet-async',
+        ],
       }),
     ],
     css: {

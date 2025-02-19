@@ -5,13 +5,16 @@ import './index.scss';
 import Footer from './component/Footer/Footer.tsx';
 import { HeaderFooterProvider } from './context/UiContext.tsx';
 import Header from './component/Header/Header.tsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HeaderFooterProvider>
-      <Header />
-      <App />
-      <Footer />
-    </HeaderFooterProvider>
+    <HelmetProvider>
+      <HeaderFooterProvider>
+        <Header />
+        <App />
+        <Footer />
+      </HeaderFooterProvider>
+    </HelmetProvider>
   </StrictMode>,
 );
