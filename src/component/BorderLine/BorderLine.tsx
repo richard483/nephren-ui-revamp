@@ -13,7 +13,7 @@ function BorderLine() {
   const [dottedLineStart, setDottedLineStart] = useState<boolean>(false);
 
   return (
-    <>
+    <div>
       <div className="corner-top-left">
         <span className="corner-top-left-H" />
         <span
@@ -70,7 +70,7 @@ function BorderLine() {
         </div>
       )}
       <Outlet />
-    </>
+    </div>
   );
 }
 
