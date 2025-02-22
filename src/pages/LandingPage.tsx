@@ -1,3 +1,4 @@
+import PortofolioSection from '@/component/PortofolioSection/PortofolioSection';
 import { HeaderFooterContextProps, useHeaderFooter } from '@/context/UiContext';
 import HeroSection from '@component/HeroSection/HeroSection.tsx';
 
@@ -8,6 +9,7 @@ function LandingPage() {
   return (
     <>
       <HeroSection />
+      <PortofolioSection />
     </>
   );
 }
