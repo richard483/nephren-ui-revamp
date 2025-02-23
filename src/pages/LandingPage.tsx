@@ -1,7 +1,7 @@
 import styles from './LandingPage.module.scss';
 import PortofolioSection from '@/component/PortofolioSection/PortofolioSection';
 import { HeaderFooterContextProps, useHeaderFooter } from '@/context/UiContext';
-import HeroSection from '@component/HeroSection/HeroSection.tsx';
+// import HeroSection from '@component/HeroSection/HeroSection.tsx';
 
 function LandingPage() {
   const { hideHeaderFooter: hideHeaderFooter } =
@@ -9,7 +9,7 @@ function LandingPage() {
   hideHeaderFooter();
   return (
     <div className={styles['landing-page']}>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <PortofolioSection />
     </div>
   );

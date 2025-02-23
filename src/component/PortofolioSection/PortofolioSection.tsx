@@ -5,6 +5,7 @@ interface PortofolioDetail {
   title: string;
   description: string;
   image: string;
+  techStack?: Array<string>;
 }
 
 function PortofolioSection() {
@@ -19,42 +20,51 @@ function PortofolioSection() {
   useEffect(() => {
     setContent([
       {
-        title: 'Project 1',
+        title: 'Blibli.com',
         description: 'This is my first project',
-        image: 'https://via.placeholder.com/150',
+        image: '/porto/blibli.png',
       },
       {
-        title: 'Project 2',
+        title: 'Infra Solusi Indonesia',
         description: 'This is my second project',
-        image: 'https://via.placeholder.com/150',
+        image: '/porto/isol.png',
       },
       {
-        title: 'Project 3',
+        title: '8-Tech',
         description: 'This is my third project',
-        image: 'https://via.placeholder.com/150',
+        image: '/porto/8tech.png',
+      },
+      {
+        title: 'Raven API',
+        description: 'This is my third project',
+        image: '/porto/raven.png',
       },
     ]);
   }, []);
   console.log(content);
   return (
-    <>
-      <h1>My Previous Work</h1>
-      <div className={styles.portofolio__wrapper}>
-        <div className="portofolio__back" onClick={prevImage}>
-          {'<'}
-        </div>
-        {content.length > 0 && (
-          <div className="portofolio__content" key={index}>
-            <h2>{content[index].title}</h2>
-            <p>{content[index].description}</p>
-            <img src={content[index].image} alt={content[index].title} />
-          </div>
-        )}
-        <div className="portofolio__next" onClick={nextImage}>
-          {'>'}
-        </div>
+    <div className={styles['portofolio__wrapper']}>
+      <h2>MY WORKS</h2>
+      <div className="portofolio__back" onClick={prevImage}>
+        {'<'}
       </div>
-    </>
+      <div className="portofolio__next" onClick={nextImage}>
+        {'>'}
+      </div>
+      {content.length > 0 && (
+        <div className={styles['portofolio__content']} key={index}>
+          <img src={content[index].image} alt={content[index].title} />
+          <div className={styles['portofolio__detail']}>
+            <div className={styles['portofolio__detail__desc']}>
+              <span />
+              <h3>{content[index].title}</h3>
+              <div className="portofolio__techStack"></div>
+              <p>{content[index].description}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
