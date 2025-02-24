@@ -55,8 +55,8 @@ function PortofolioSection() {
         <div className={styles['portofolio__content']} key={index}>
           <img src={content[index].image} alt={content[index].title} />
           <div className={styles['portofolio__detail']}>
+            <span />
             <div className={styles['portofolio__detail__desc']}>
-              <span />
               <h3>{content[index].title}</h3>
               <div className="portofolio__techStack"></div>
               <p>{content[index].description}</p>

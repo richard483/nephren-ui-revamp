@@ -1,7 +1,6 @@
 @use '@variables' as var;
 
 .portofolio {
-
   &__wrapper {
     height: calc(100vh - 196px);
     padding: 48px 0;
@@ -23,15 +22,16 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
     width: 100%;
+    height: 100%;
     margin-top: 48px;
     background-color: transparent;
 
     img {
       width: 60vw;
-      height: auto;
+      height: 30vh;
       z-index: 0;
     }
   }
@@ -39,19 +39,21 @@
   &__detail {
     position: absolute;
     z-index: 1;
-    background-color: var.$white;
-    display: block;
+    display: flex;
     flex-direction: row;
+    justify-content: end;
+    span {
+      margin-right: -43vw;
+      background-color: red;
+      height: calc(50vh);
+      width: 20px;
+      transform: skew(-30deg);
+    }
     &__desc {
-      display: block;
-      span {
-        display: block;
-        background-color: red;
-        height: 75vh;
-        width: 20px;
-        transform: skew(-20deg);
-      }
+      min-width: 85vw;
+      justify-content: end;
+      display: flex;
+      background: linear-gradient(120deg, transparent 0 50%, var.$sky 50% 100%);
     }
   }
-
 }
