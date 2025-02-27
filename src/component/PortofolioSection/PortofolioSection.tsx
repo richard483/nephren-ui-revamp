@@ -18,6 +18,14 @@ function PortofolioSection() {
   //   setIndex((prevIndex) => (prevIndex - 1 + content.length) % content.length);
   // };
   useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 5000000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [content.length]);
+  useEffect(() => {
     setContent([
       {
         title: 'Blibli.com',
