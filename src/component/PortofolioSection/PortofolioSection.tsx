@@ -3,7 +3,7 @@ import styles from './PortofolioSection.module.scss';
 
 interface PortofolioDetail {
   title: string;
-  description: string;
+  description: string | Array<string>;
   image: string;
   techStack?: Array<string>;
 }
@@ -21,7 +21,12 @@ function PortofolioSection() {
     setContent([
       {
         title: 'Blibli.com',
-        description: 'This is my first project',
+        description: [
+          '• Contributed to high-impact projects such as Reset Phone Number Verification, International Phone Number Registration, and Unified Membership, impacting 38 million active users on Blibli’s platform.',
+          '• Designed and implemented RESTful APIs using Spring Boot and Java, integrating Redis caching with Aspect-Oriented Programming (AOP) to optimize performance and reduce latency.',
+          '• Developed unit and integration tests for both back-end and front-end services using JUnit, Sinon, and Jest.',
+          '• Developed event-driven microservices using Apache Kafka and Google Pub/Sub, enabling seamless communication between internal and external systems. And enhanced front-end services by migrating existing services into Vue 3.',
+        ],
         image: '/porto/blibli.png',
       },
       {
@@ -56,14 +61,21 @@ function PortofolioSection() {
           key={index}
           onClick={nextImage}
         >
-          <h2>asd</h2>
+          <h2>MY PREVIOUS WORKS</h2>
           <img src={content[index].image} alt={content[index].title} />
           <div className={styles['portofolio__detail']}>
             <span />
             <div className={styles['portofolio__detail__desc']}>
               <h3>{content[index].title}</h3>
-              <div className="portofolio__techStack"></div>
-              <p>{content[index].description}</p>
+              <br />
+              {/* <div className="portofolio__techStack"></div> */}
+              {content[index].description instanceof Array ? (
+                content[index].description.map((desc, idx) => (
+                  <p key={idx}>{desc}</p>
+                ))
+              ) : (
+                <p>{content[index].description}</p>
+              )}
             </div>
           </div>
         </div>
