@@ -1,5 +1,16 @@
 .landing-page {
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
+  height: calc(100vh - 192px);
+  overflow: hidden;
+}
+
+.snap-container {
+  height: calc(100vh - 192px);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  height: calc(100vh - 192px);
+  scroll-snap-align: start;
 }

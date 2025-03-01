@@ -7,17 +7,14 @@
     display: flex;
     width: 5rem;
     justify-content: space-between;
+    z-index: 1;
   }
   &__wrapper {
-    height: calc(100vh - 196px);
+    height: calc(100vh - 192px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media screen and (max-height: 800px) {
-      margin-top: 5vh;
-      
-    }
   }
 
   &__content {
@@ -43,7 +40,7 @@
       width: 672px;
       height: 400px;
       z-index: 0;
-      margin-right: 320px;
+      margin-right: calc(22vw - 120px);
       margin-bottom: 6rem;
     }
   }
@@ -54,7 +51,7 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    span {
+    &__span {
       margin-right: -368px;
       background-color: var.$grey;
       height: 560px;
@@ -83,6 +80,15 @@
         margin-top: 1rem;
         text-align: justify;
         width: 50%;
+      }
+
+      span {
+        position: absolute;
+        top:0;
+        width: 50%;
+        height: 100%;
+        background-color: var.$white;
+        z-index: -1;
       }
 
     }

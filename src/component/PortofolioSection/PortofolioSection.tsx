@@ -62,7 +62,7 @@ function PortofolioSection() {
           <h2>MY PREVIOUS WORKS</h2>
           <img src={content[index].image} alt={content[index].title} />
           <div className={styles['portofolio__detail']}>
-            <span />
+            <span className={styles['portofolio__detail__span']} />
             <div className={styles['portofolio__detail__desc']}>
               <h3>{content[index].title}</h3>
               <br />
@@ -74,6 +74,7 @@ function PortofolioSection() {
               ) : (
                 <p>{content[index].description}</p>
               )}
+              <span />
             </div>
           </div>
           <div className={styles['portofolio__index']}>
