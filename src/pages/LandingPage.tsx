@@ -14,7 +14,9 @@ function LandingPage() {
         <section className={styles['snap-section']}>
           <HeroSection />
         </section>
-        <section className={styles['snap-section']}>
+        <section
+          className={`${styles['snap-section']} ${styles['hide-on-mobile']}`}
+        >
           <PortofolioSection />
         </section>
       </div>

@@ -14,3 +14,10 @@
   height: calc(100vh - 192px);
   scroll-snap-align: start;
 }
+
+@media screen and (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  
+}
