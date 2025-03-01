@@ -1,6 +1,13 @@
 @use '@variables' as var;
 
 .portofolio {
+  &__index {
+    background-color: rgba(var.$grey, 0.25);
+    padding: 0 2px;
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+  }
   &__wrapper {
     height: calc(100vh - 196px);
     display: flex;
@@ -81,3 +88,54 @@
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+.portofolio {
+
+  &__wrapper {
+    margin-top: 0;
+  }
+
+  &__content {
+    h2 {
+      padding: 0.25rem;
+    }
+
+    img {
+      width: 360px;
+      height: 214px;
+      margin-right: 240px;
+    }
+  }
+
+  &__detail {
+    span {
+      margin-right: -200px;
+      height: 400px;
+    }
+    &__desc {
+      padding-left: 0;
+      width: 560px;
+      height: 328px;
+      background: linear-gradient(120deg, transparent 0 40%, var.$white 40% 72%, transparent 72% 100%);
+
+      h3 {
+        margin-left: calc(50% + 3rem);
+        font-size: 2rem;
+      }
+
+      p {
+        width: 50%;
+        font-size: 0.7rem;
+      }
+
+    }
+  }
+}
+
+} 
+
+@media screen and (max-width: 768) {
+
+  
+  } 

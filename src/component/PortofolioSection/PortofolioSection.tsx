@@ -14,13 +14,10 @@ function PortofolioSection() {
   const nextImage = () => {
     setIndex((prevIndex) => (prevIndex + 1) % content.length);
   };
-  // const prevImage = () => {
-  //   setIndex((prevIndex) => (prevIndex - 1 + content.length) % content.length);
-  // };
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 5000000);
+    }, 5000);
     return () => {
       clearInterval(interval);
     };
@@ -54,15 +51,8 @@ function PortofolioSection() {
       },
     ]);
   }, []);
-  console.log(content);
   return (
     <div className={styles['portofolio__wrapper']}>
-      {/* <div className="portofolio__back" onClick={prevImage}>
-        {'<'}
-      </div>
-      <div className="portofolio__next" onClick={nextImage}>
-        {'>'}
-      </div> */}
       {content.length > 0 && (
         <div
           className={styles['portofolio__content']}
@@ -85,6 +75,12 @@ function PortofolioSection() {
                 <p>{content[index].description}</p>
               )}
             </div>
+          </div>
+          <div className={styles['portofolio__index']}>
+            <p>idx:</p>
+            <p>
+              {index} / {content.length - 1}
+            </p>
           </div>
         </div>
       )}
