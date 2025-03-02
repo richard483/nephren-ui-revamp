@@ -67,7 +67,7 @@ function PortofolioSection() {
               <h3>{content[index].title}</h3>
               <br />
               {/* <div className="portofolio__techStack"></div> */}
-              {content[index].description instanceof Array ? (
+              {Array.isArray(content[index].description) ? (
                 content[index].description.map((desc, idx) => (
                   <p key={idx}>{desc}</p>
                 ))
