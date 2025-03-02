@@ -2,12 +2,25 @@
 
 .portofolio {
   &__index {
-    background-color: rgba(var.$grey, 0.25);
-    padding: 0 2px;
     display: flex;
-    width: 5rem;
-    justify-content: space-between;
+    flex-direction: row;
+    gap : 1rem;
     z-index: 1;
+    span {
+      color: var.$sky;
+      font-weight: 100;
+      z-index: 1;
+      cursor: pointer;
+    }
+    &__stats{ 
+      background-color: rgba(var.$grey, 0.25);
+      padding: 0 2px;
+      display: flex;
+      width: 5rem;
+      justify-content: space-between;
+      z-index: 1;
+    }
+
   }
   &__wrapper {
     height: calc(100vh - 192px);
