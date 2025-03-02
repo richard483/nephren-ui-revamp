@@ -36,18 +36,27 @@ function PortofolioSection() {
       },
       {
         title: 'Infra Solusi Indonesia',
-        description: 'This is my second project',
+        description:
+          'Responsible for creating, fixing, and adding features to the API that the company will use oh their Front End and Mobile Apps.',
         image: '/porto/isol.png',
       },
       {
         title: '8-Tech',
-        description: 'This is my third project',
+        description:
+          'Is my Thesis project with 2 of my other friends. I handle all stuff for the Backend side, and some on Frontend side. In short, this is a talent acquisition application for searching freelancer with some features like contract generator, and payment gateway integration.',
         image: '/porto/8tech.png',
       },
       {
         title: 'Raven API',
-        description: 'This is my third project',
+        description:
+          "This is a Spring Boot Reactive Web Client library insired by Blibli Backend Framework's API Client.",
         image: '/porto/raven.png',
+      },
+      {
+        title: 'Golang Link Shortener',
+        description:
+          'My personal project for learning Golang with Echo. Using no-SQL database with MongoDB (Atlas) for save all the short links.',
+        image: '/porto/link-shortener.png',
       },
     ]);
   }, []);
