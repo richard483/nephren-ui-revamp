@@ -5,11 +5,11 @@ import {
 } from '../../context/UiContext';
 
 function Header() {
-  const { isHeaderFooterVisible: isFooterVisible } =
+  const { isHeaderVisible: isHeaderVisible } =
     useHeaderFooter() as HeaderFooterContextProps;
   return (
     <>
-      {isFooterVisible && (
+      {isHeaderVisible && (
         <header className={styles.header}>
           <button
             onClick={() => {

@@ -4,9 +4,9 @@ import { HeaderFooterContextProps, useHeaderFooter } from '@/context/UiContext';
 import HeroSection from '@component/HeroSection/HeroSection.tsx';
 
 function LandingPage() {
-  const { hideHeaderFooter: hideHeaderFooter } =
+  const { hideHeader: hideHeader } =
     useHeaderFooter() as HeaderFooterContextProps;
-  hideHeaderFooter();
+  hideHeader();
 
   return (
     <div className={styles['landing-page']}>

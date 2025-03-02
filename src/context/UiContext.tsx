@@ -1,23 +1,53 @@
 import { createContext, useContext, useState } from 'react';
 
 export interface HeaderFooterContextProps {
-  isHeaderFooterVisible: boolean;
-  showHeaderFooter: () => void;
-  hideHeaderFooter: () => void;
+  isFooterVisible: boolean;
+  isHeaderVisible: boolean;
+  showHeader: () => void;
+  hideHeader: () => void;
+  showFooter: () => void;
+  hideFooter: () => void;
 }
 
-const HeaderFooterContext = createContext<HeaderFooterContextProps | undefined>(undefined);
+const HeaderFooterContext = createContext<HeaderFooterContextProps | undefined>(
+  undefined,
+);
 
 export const useHeaderFooter = () => useContext(HeaderFooterContext);
 
-export const HeaderFooterProvider = ({ children }: { children: React.ReactNode }) => {
+export const HeaderFooterProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const [isFooterVisible, setFooterVisibility] = useState<boolean>(true);
+  const [isHeaderVisible, setHeaderVisibility] = useState<boolean>(true);
 
-  const hideHeaderFooter = () => { setFooterVisibility(false); };
-  const showHeaderFooter = () => { setFooterVisibility(true); };
+  const hideFooter = () => {
+    setFooterVisibility(false);
+  };
+  const showFooter = () => {
+    setFooterVisibility(true);
+  };
+
+  const hideHeader = () => {
+    setHeaderVisibility(false);
+  };
+  const showHeader = () => {
+    setHeaderVisibility(true);
+  };
 
   return (
-    <HeaderFooterContext.Provider value={{ isHeaderFooterVisible: isFooterVisible, showHeaderFooter: showHeaderFooter, hideHeaderFooter: hideHeaderFooter }}>
+    <HeaderFooterContext.Provider
+      value={{
+        isFooterVisible,
+        isHeaderVisible,
+        hideFooter,
+        showFooter,
+        hideHeader,
+        showHeader,
+      }}
+    >
       {children}
     </HeaderFooterContext.Provider>
   );

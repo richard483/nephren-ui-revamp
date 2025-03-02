@@ -6,7 +6,7 @@ import {
 import { useState } from 'react';
 
 function Footer() {
-  const { isHeaderFooterVisible: isHeaderFooterVisible } =
+  const { isFooterVisible: isFooterVisible } =
     useHeaderFooter() as HeaderFooterContextProps;
   const [message, setMessage] = useState<string>('');
 
@@ -21,7 +21,7 @@ function Footer() {
   };
   return (
     <>
-      {isHeaderFooterVisible && (
+      {isFooterVisible && (
         <footer className={styles.footer}>
           <div className={styles['footer-wrapper']}>
             <div className={styles['footer-content']}>
