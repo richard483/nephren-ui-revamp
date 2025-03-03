@@ -21,7 +21,7 @@ function PortofolioSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 50000);
+    }, 5000);
     return () => {
       clearInterval(interval);
     };
