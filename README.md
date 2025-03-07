@@ -42,3 +42,7 @@ run the project (for development involving other micro frontend)
 ```bash
 npm run dev:watch
 ```
+
+Related repository:
+
+- [Nephren Blogs](https://github.com/richard483/nephren-blogs.git)
