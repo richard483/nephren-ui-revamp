@@ -12,7 +12,7 @@
 // }
 
 KubePipeline() {
-	dockerImage = "nephren-ui-revamp:latest"
+	dockerImage = "nephren-ui-revamp:local"
 	projectName = "nephren-ui-revamp"
 	appPort = "7002"
     networkName = "nephren-ui"
