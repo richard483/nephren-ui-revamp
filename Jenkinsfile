@@ -15,7 +15,7 @@ KubePipeline() {
 	dockerImage = "nephren-ui-kube:local"
 	projectName = "nephren-ui-kube"
 	appPort = "7002"
-    clusterIP = "10.96.0.100"
+    clusterIP = "192.168.1.50"
     clusterPort = "30000"
     networkName = "nephren-ui"
     buildArgs = [
