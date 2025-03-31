@@ -4,7 +4,6 @@ import react from '@vitejs/plugin-react-swc';
 import checker from 'vite-plugin-checker';
 import federation from '@originjs/vite-plugin-federation';
 
-
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');

@@ -4,10 +4,9 @@ import { lazy, useEffect } from 'react';
 import BorderLine from './component/BorderLine/BorderLine';
 import ReactGA from 'react-ga4';
 import BorderLineRight from './component/BorderLineRight/BorderLineRight';
-import env from 'react-dotenv';
 
 const RemoteBlogs = lazy(() => import('blogs/App'));
-const configValue: string = env.VITE_GOOGLE_TAG as string;
+const configValue: string = import.meta.env.VITE_GOOGLE_TAG as string;
 
 function App() {
   useEffect(() => {
