@@ -1,5 +1,7 @@
 FROM node:21-alpine
 
+RUN apk add --no-cache bash
+
 LABEL authors="Richard William"
 
 ARG VITE_GOOGLE_TAG
