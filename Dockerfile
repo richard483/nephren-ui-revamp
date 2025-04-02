@@ -1,12 +1,14 @@
 FROM node:21-alpine
 
-RUN apk add --no-cache bash
-
 LABEL authors="Richard William"
 
-ENV VITE_GOOGLE_TAG="UA-00000000-0"
+ARG VITE_GOOGLE_TAG
 
-ENV VITE_NEPHREN_BLOG="is-it-overwritted?"
+ARG VITE_NEPHREN_BLOG
+
+ENV VITE_GOOGLE_TAG=$VITE_GOOGLE_TAG
+
+ENV VITE_NEPHREN_BLOG=$VITE_NEPHREN_BLOG
 
 WORKDIR /app
 
@@ -18,6 +20,6 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 7002
+EXPOSE 7000
 
-CMD [ "serve", "-s", "dist", "-l", "7002"]
+CMD [ "serve", "-s", "dist", "-l", "7000"]
