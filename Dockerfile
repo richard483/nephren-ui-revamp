@@ -1,4 +1,6 @@
-FROM node:21-alpine AS builder
+FROM node:21-alpine
+
+RUN apk add --no-cache bash
 
 LABEL authors="Richard William"
 
@@ -13,10 +15,6 @@ ENV VITE_NEPHREN_BLOG=$VITE_NEPHREN_BLOG
 WORKDIR /app
 
 COPY package.json .
-
-FROM alpine:latest AS runner
-
-RUN apk add --no-cache bash
 
 RUN npm install && npm i -g serve
 
