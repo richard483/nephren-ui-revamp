@@ -16,4 +16,4 @@ RUN npm run build
 
 EXPOSE 7002
 
-CMD [ "serve", "-s", "dist", "-l", "7002", "&", "printenv"]
+CMD [ "serve", "-s", "dist", "-l", "7002"]
