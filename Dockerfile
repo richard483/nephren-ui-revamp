@@ -6,7 +6,7 @@ LABEL authors="Richard William"
 
 ENV VITE_GOOGLE_TAG="UA-00000000-0"
 
-ENV VITE_NEPHREN_BLOG="blog.nephren.xyz"
+ENV VITE_NEPHREN_BLOG="is-it-overwritted?"
 
 WORKDIR /app
 
