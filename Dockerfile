@@ -18,25 +18,13 @@
 
 # CMD [ "serve", "-s", "dist", "-l", "7002"]
 
-FROM node:21-alpine AS builder
-
+FROM node:21-alpine as build-stage
 WORKDIR /app
-COPY package.json .
+COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine
-
-RUN rm -rf /etc/nginx/conf.d/default.conf
-
-COPY nginx.conf /etc/nginx/conf.d
-
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-EXPOSE 7002
-
-ENTRYPOINT ["/entrypoint.sh"]
+FROM nginx:alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]
