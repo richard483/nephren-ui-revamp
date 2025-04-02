@@ -4,13 +4,9 @@ RUN apk add --no-cache bash
 
 LABEL authors="Richard William"
 
-ARG VITE_GOOGLE_TAG
+ENV VITE_GOOGLE_TAG="UA-00000000-0"
 
-ARG VITE_NEPHREN_BLOG
-
-ENV VITE_GOOGLE_TAG
-
-ENV VITE_NEPHREN_BLOG
+ENV VITE_NEPHREN_BLOG="blog.nephren.xyz"
 
 WORKDIR /app
 
