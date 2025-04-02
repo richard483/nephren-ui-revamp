@@ -4,6 +4,10 @@ RUN apk add --no-cache bash
 
 LABEL authors="Richard William"
 
+ENV VITE_GOOGLE_TAG
+
+ENV VITE_NEPHREN_BLOG
+
 WORKDIR /app
 
 COPY package.json .
