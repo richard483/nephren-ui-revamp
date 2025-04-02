@@ -14,7 +14,7 @@ WORKDIR /app
 
 COPY package.json .
 
-FROM alpine:latest as runner
+FROM alpine:latest AS runner
 
 RUN apk add --no-cache bash
 
