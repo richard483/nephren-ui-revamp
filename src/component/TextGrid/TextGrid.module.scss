@@ -16,14 +16,15 @@
     width: 13px;
     height: 13px;
     border-radius: 100%;
-    background-color: var.$dark-grey;
+    background-color: var.$midnight;
   }
 
   .dot-text {
+    color: var.$midnight;
     width: 13px;
     height: 13px;
     border-radius: 100%;
-    background-color: rgba(var.$dark-grey, 0.1);
+    background-color: rgba(var.$midnight, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,14 +72,14 @@
       width: 6px;
       height: 6px;
       border-radius: 100%;
-      background-color: var.$dark-grey;
+      background-color: var.$midnight;
     }
 
     .dot-text {
       width: 6px;
       height: 6px;
       border-radius: 100%;
-      background-color: rgba(var.$dark-grey, 0.1);
+      background-color: rgba(var.$midnight, 0.1);
       display: flex;
       justify-content: center;
       align-items: center;
