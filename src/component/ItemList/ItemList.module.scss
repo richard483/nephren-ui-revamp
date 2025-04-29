@@ -9,7 +9,7 @@
 }
 
 .dark-grey {
-  background-color: var.$dark-grey;
+  background-color: var.$midnight;
 }
 
 .anchor {
@@ -36,6 +36,7 @@
     align-items: center;
     font-size: 24px;
     line-height: 0.8;
+    color: var.$midnight;
   }
 }
 
@@ -85,6 +86,6 @@
   }
 
   .dark-grey-txt {
-    color: var.$dark-grey;
+    color: var.$midnight;
   }
 }

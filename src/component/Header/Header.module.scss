@@ -2,10 +2,12 @@
 
 .red {
   background-color: var.$red;
+  transition: all 0.5s;
 }
 
 .sky {
   background-color: var.$sky;
+  transition: all 0.5s;
 }
 
 .header {
@@ -24,12 +26,20 @@
     justify-content: center;
     gap: 56px;
 
-    .sky-text:hover {
-      color: var.$sky;
+    .sky-text {
+      color: var.$midnight;
+      transition: all 0.5s;
+      &:hover {
+        color: var.$sky;
+      }
     }
 
-    .red-text:hover {
-      color: var.$red;
+    .red-text {
+      color: var.$midnight;
+      transition: all 0.5s;
+      &:hover {
+        color: var.$red;
+      }
     }
   }
 

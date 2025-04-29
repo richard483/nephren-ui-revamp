@@ -17,6 +17,7 @@
   line-height: 68px;
   text-align: start;
   white-space: nowrap;
+  color: var.$midnight;
 }
 
 .box {
@@ -69,6 +70,7 @@
 
   &-desc {
     font-size: 1.75rem;
+    color: var.$midnight;
   }
 
   &-nephren {
@@ -154,7 +156,6 @@
   .box {
     width: 144px;
     height: 144px;
-
 
     &-blue {
       right: 72px;

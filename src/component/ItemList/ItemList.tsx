@@ -13,12 +13,7 @@ function ItemList({
 }) {
   return (
     <>
-      <a
-        className={styles.anchor}
-        href={redirectUrl || '/'}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a className={styles.anchor} href={redirectUrl || '/'} rel="noreferrer">
         <div className={`${styles['item']} ${styles[className as string]}`}>
           <span
             className={`${styles['point']} ${styles[pointColor as string]}`}
