@@ -2,9 +2,13 @@ FROM node:21-alpine
 
 LABEL authors="Richard William"
 
-ENV VITE_GOOGLE_TAG="__VITE_GOOGLE_TAG__"
+ARG VITE_GOOGLE_TAG
 
-ENV VITE_NEPHREN_BLOG="__VITE_NEPHREN_BLOG__"
+ARG VITE_NEPHREN_BLOG
+
+ENV VITE_GOOGLE_TAG=$VITE_GOOGLE_TAG
+
+ENV VITE_NEPHREN_BLOG=$VITE_NEPHREN_BLOG
 
 WORKDIR /app
 
@@ -16,9 +20,6 @@ COPY . .
 
 RUN npm run build
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
 EXPOSE 7002
 
-CMD ["/entrypoint.sh"]
+CMD [ "serve", "-s", "dist", "-l", "7002"]
