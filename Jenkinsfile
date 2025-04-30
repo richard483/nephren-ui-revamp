@@ -18,8 +18,4 @@ KubePipeline() {
     clusterIP = "10.152.183.11"
     clusterPort = "30000"
     networkName = "nephren-ui"
-    buildArgs = [
-        VITE_GOOGLE_TAG: "${this.env.VITE_GOOGLE_TAG}",
-        VITE_NEPHREN_BLOG: "https://blog.nephren.xyz",
-    ]
 }
