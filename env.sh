@@ -3,8 +3,8 @@ set -e  # Exit on error
 
 echo "Starting environment variable substitution"
 
-# Process all environment variables with ENV_VAR_ prefix
-for i in $(printenv | grep '^ENV_VAR_'); do
+# Process all environment variables with VITE_ prefix
+for i in $(printenv | grep '^VITE_'); do
     key=$(echo "$i" | cut -d '=' -f 1)
     value=$(echo "$i" | cut -d '=' -f 2-)
     
