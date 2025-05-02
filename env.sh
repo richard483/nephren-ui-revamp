@@ -11,7 +11,7 @@ for i in $(printenv | grep '^ENV_VAR_'); do
     echo "Replacing $key with $value"
     
     # Process all files including HTML
-    find /usr/share/nginx/html -type f \( -name '*.js' -o -name '*.css' -o -name '*.html' \) \
+    find /usr/share/nginx/html/assets -type f \( -name '*.js' -o -name '*.css' -o -name '*.html' \) \
         -exec sed -i "s|$key|$value|g" {} +
 done
 
