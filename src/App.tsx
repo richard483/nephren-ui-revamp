@@ -20,7 +20,10 @@ function App() {
           <Route path="/" element={<BorderLine />}>
             <Route path="/" element={<LandingPage />} />
           </Route>
-          <Route path="/hello-world" element={'Hello World!\n01/05/25 22:09'} />
+          <Route
+            path="/hello-world"
+            element={`Hello World!\n02/05/25 13:20 ${import.meta.env.VITE_GOOGLE_TAG as string}`}
+          />
           <Route
             path="/blogs/*"
             element={
