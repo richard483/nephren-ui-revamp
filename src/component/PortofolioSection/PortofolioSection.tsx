@@ -25,7 +25,7 @@ function PortofolioSection() {
     return () => {
       clearInterval(interval);
     };
-  }, [content.length]);
+  }, [content.length, nextImage]);
   useEffect(() => {
     setContent([
       {
@@ -68,11 +68,17 @@ function PortofolioSection() {
     <div className={styles['portofolio__wrapper']}>
       {content.length > 0 && (
         <div className={styles['portofolio__content']} key={index}>
-          <h2>MY PREVIOUS WORKS</h2>
-          <img src={content[index].image} alt={content[index].title} />
+          <h2 className={styles['disable-select']}>MY PREVIOUS WORKS</h2>
+          <img
+            src={content[index].image}
+            alt={content[index].title}
+            className={styles['disable-select']}
+          />
           <div className={styles['portofolio__detail']}>
             <span className={styles['portofolio__detail__span']} />
-            <div className={styles['portofolio__detail__desc']}>
+            <div
+              className={`${styles['portofolio__detail__desc']} ${styles['disable-select']}`}
+            >
               <h3>{content[index].title}</h3>
               <br />
               {/* <div className="portofolio__techStack"></div> */}
@@ -86,7 +92,9 @@ function PortofolioSection() {
               <span />
             </div>
           </div>
-          <div className={styles['portofolio__index']}>
+          <div
+            className={`${styles['portofolio__index']} ${styles['disable-select']}`}
+          >
             <span onClick={prevImage}>{'<'}</span>
             <div className={styles['portofolio__index__stats']}>
               <p>idx:</p>
