@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<BorderLine />}>
             <Route path="/" element={<LandingPage />} />
           </Route>
-          <Route path="/hello-world" element={'Hello World!'} />
+          <Route path="/hello-world" element={`Hello World!\n02/05/25 13:20`} />
           <Route
             path="/blogs/*"
             element={

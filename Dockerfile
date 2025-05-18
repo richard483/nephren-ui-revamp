@@ -1,25 +1,15 @@
-FROM node:21-alpine
-
-LABEL authors="Richard William"
-
-ARG VITE_GOOGLE_TAG
-
-ARG VITE_NEPHREN_BLOG
-
-ENV VITE_GOOGLE_TAG=$VITE_GOOGLE_TAG
-
-ENV VITE_NEPHREN_BLOG=$VITE_NEPHREN_BLOG
-
+FROM node:21-alpine as build
+RUN apk add git
 WORKDIR /app
-
-COPY package.json .
-
-RUN npm install && npm i -g serve
-
+COPY package*.json ./
+RUN npm install
 COPY . .
-
 RUN npm run build
 
-EXPOSE 7000
-
-CMD [ "serve", "-s", "dist", "-l", "7000"]
+FROM nginx:1.21.6-alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY env.sh /docker-entrypoint.d/env.sh
+RUN chmod 755 /docker-entrypoint.d/env.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
